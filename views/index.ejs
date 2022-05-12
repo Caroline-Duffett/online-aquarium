@@ -3,8 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Index Page</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <h1>Index Page</h1>
+
+    <% for (let i = 0; i < fishData.length; i++) { %>
+
+      <div class="fish-wrapper">
+
+        <div class="fish-img-container">
+          <img src="<%= fishData[i].img %>" alt="">
+        </div>
+
+        <div class="fish-name-header">
+          <h3 id='show-name'><%= fishData[i].name %></h3>
+        </div>
+
+      </div>
+
+    <% } %>
+
   </body>
 </html>

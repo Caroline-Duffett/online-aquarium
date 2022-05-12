@@ -55,7 +55,7 @@ module.exports = [
     Size: '1 1/2 - 8 feet in diameter. Their tenticals can grow to be more than 100 feet.'
   },
   {
-    name: 'Lined Seahrose',
+    name: 'Lined Seahorse',
     scientificName: 'Hippocampus erectus',
     description: 'Can give brith to up to 2,500 babies at a time. They have a bony body, which protects them from predators.',
     animalType: 'Fish',
@@ -104,7 +104,7 @@ module.exports = [
     description: 'They are long and skinny and are brown to green in color. They have no fins or gill covers. This means they have to continuously open and close their mouth in order to breath.',
     animalType: 'Fish',
     range: 'Pacific Ocean from Southern California to Northern Mexico.',
-    img: '',
+    img: 'https://i.imgur.com/pNoEBHe.jpg',
     number: 2,
     diet: ['small fish','sea urchins', 'lobsters', 'crabs', 'octopuses'],
     Size: 'Up to five feet'
