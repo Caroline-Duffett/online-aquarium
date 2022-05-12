@@ -119,15 +119,15 @@ app.get('/aquarium', (req, res) => {
 // })
 
 //--- SHOW ROUTE
-// app.get('/aquarium/:id', (req, res) => {
-//   Fish.findById(req.params.id, (err, foundFish) => {
-//     res.render('show.ejs',
-//       {
-//         fishData: foundFish,
-//       }
-//     )
-//   })
-// })
+app.get('/aquarium/:id', (req, res) => {
+  Fish.findById(req.params.id, (err, foundFish) => {
+    res.render('show.ejs',
+      {
+        fishData: foundFish,
+      }
+    )
+  })
+})
 
 // //--- DESTROY (DELETE) ROUTE
 // app.delete('/aquarium/:id', (req, res) => {
