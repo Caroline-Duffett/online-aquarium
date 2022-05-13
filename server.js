@@ -154,7 +154,7 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 
 
 //---------- Graveyard ----------//
-//Original edit form:
+//--- Original edit form:
 // <form class="fish-form" action="/<%=fishData._id%>?_method=PUT" method="POST">
 //   Name: <input type="text" name="name" value="<%=fishData.name%>" required/><br/>
 //   Scientific Name: <input type="scientificName" name="scientificName" value="<%=fishData.scientificName%>"/><br/>
@@ -168,3 +168,15 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //
 //   <input class='form-button' type="submit" value="Submit Changes"/>
 // </form>
+
+//--- Original finsh-wrapper before index flexbox
+// .fish-wrapper {
+//   margin: 2em auto;
+//   width: 50%;
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: nowrap;
+//   background-color: lightblue;
+//   border-radius: 2em;
+//   align-items: center;
+// }

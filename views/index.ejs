@@ -8,25 +8,26 @@
   <body>
     <h1 id='index-h1'>Aquarium</h1>
 
-      <a id='create-button' href="/new"> <button type="button" name="button">Create New Animal</button></a>
+    <a id='create-button' href="/new"> <button type="button" name="button">Create New Animal +</button></a>
 
-    <% for (let i = 0; i < fishData.length; i++) { %>
+    <div class="index-flexbox">
+      <% for (let i = 0; i < fishData.length; i++) { %>
 
-      <div class="fish-wrapper">
+        <div class="fish-wrapper">
 
-        <a href="/<%=fishData[i]._id%>">
-        <div class="fish-img-container">
-          <img src="<%= fishData[i].img %>" alt="">
+          <a href="/<%=fishData[i]._id%>">
+          <div class="fish-img-container">
+            <img src="<%= fishData[i].img %>" alt="">
+          </div>
+
+          <div class="fish-name-header">
+            <h3 id='show-name'><%= fishData[i].name %></h3>
+          </div>
+          </a>
+
         </div>
 
-        <div class="fish-name-header">
-          <h3 id='show-name'><%= fishData[i].name %></h3>
-        </div>
-        </a>
-
-      </div>
-
-    <% } %>
-
+      <% } %>
+    </div>
   </body>
 </html>
