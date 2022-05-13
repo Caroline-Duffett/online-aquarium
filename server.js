@@ -70,20 +70,6 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //   res.send('Hello World!');
 // });
 
-//--- NEW ROUTE
-app.get('/new', (req, res) => {
-  res.render('new.ejs')
-})
-
-//--- UPDATE ROUTE
-app.put('/:id', (req, res) => {
-  Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
-    Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
-      res.redirect('/')
-    })
-  })
-})
-
 //--- SEED ROUTE
 app.get('/seed', (req, res) => {
   Fish.create(fishSeed, (err, data) => {
@@ -111,14 +97,17 @@ app.post('/', (req, res) => {
   })
 })
 
-//--- Edit ROUTE
-app.get('/:id/edit', (req, res) => {
-  Fish.findById(req.params.id, (err, foundFish) => {
-    res.render('edit.ejs',
-      {
-        fishData: foundFish,
-      }
-    )
+//--- NEW ROUTE
+app.get('/new', (req, res) => {
+  res.render('new.ejs')
+})
+
+//--- UPDATE ROUTE
+app.put('/:id', (req, res) => {
+  Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
+    Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
+      res.redirect('/')
+    })
   })
 })
 
@@ -126,6 +115,17 @@ app.get('/:id/edit', (req, res) => {
 app.get('/:id', (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
     res.render('show.ejs',
+      {
+        fishData: foundFish,
+      }
+    )
+  })
+})
+
+//--- Edit ROUTE
+app.get('/:id/edit', (req, res) => {
+  Fish.findById(req.params.id, (err, foundFish) => {
+    res.render('edit.ejs',
       {
         fishData: foundFish,
       }
@@ -147,3 +147,24 @@ app.delete('/:id', (req, res) => {
 //Listener
 //___________________
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+
+
+
+
+
+
+//---------- Graveyard ----------//
+//Original edit form:
+// <form class="fish-form" action="/<%=fishData._id%>?_method=PUT" method="POST">
+//   Name: <input type="text" name="name" value="<%=fishData.name%>" required/><br/>
+//   Scientific Name: <input type="scientificName" name="scientificName" value="<%=fishData.scientificName%>"/><br/>
+//   Description: <input type="text" name="description" value="<%=fishData.description%>" required/><br/>
+//   Animal Type: <input type="text" name="animalType" value="<%=fishData.animalType%>" required/><br/>
+//   Range: <input type="text" name="range" value="<%=fishData.range%>" required/><br/>
+//   Image URL: <input type="url" name="img" value="<%=fishData.img%>"/><br/>
+//   Number: <input type="number" name="number" value="<%=fishData.number%>" required/><br/>
+//   Diet: <input type="text" name="diet" value="<%=fishData.diet%>"/><br/>
+//   Size: <input type="text" name="size" value="<%=fishData.size%>"/><br/>
+//
+//   <input class='form-button' type="submit" value="Submit Changes"/>
+// </form>

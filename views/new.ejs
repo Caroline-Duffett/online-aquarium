@@ -3,21 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>New Page</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <div class='form-wrapper'>
       <h1>Create New Animal</h1>
 
-      <form class="new-fish-form" action="/" method="POST">
-        Name: <input type="text" name="name" required/><br/>
-        Scientific Name: <input type="scientificName" name="scientificName"/><br/>
-        Description: <input type="text" name="description" required/><br/>
-        Animal Type: <input type="text" name="animalType" required/><br/>
-        Range: <input type="text" name="range" required/><br/>
-        Image URL: <input type="url" name="img"/><br/>
-        Number: <input type="number" name="number" required/><br/>
-        Diet: <input type="text" name="diet"/><br/>
-        Size: <input type="text" name="size"/><br/>
+      <form class="fish-form" action="/" method="POST">
+        <div class="form-row-normal">
+          <h5>Name:</h5><input type="text" name="name" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Scientific Name:</h5><input type="scientificName" name="scientificName"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Animal Type:</h5><input type="text" name="animalType" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Range:</h5><input type="text" name="range" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Image URL:</h5> <input type="url" name="img"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Number: </h5><input type="number" name="number" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Diet:</h5><input type="text" name="diet"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Size:</h5><input type="text" name="size"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Description:</h5><input type="text" name="description" required/>
+        </div>
 
         <input class='form-button' type="submit" value="Create Animal"/>
       </form>

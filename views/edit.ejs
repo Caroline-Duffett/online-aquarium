@@ -3,21 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>Edit Page</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <div class='form-wrapper'>
       <h1>Edit: <%= fishData.name %> </h1>
 
       <form class="fish-form" action="/<%=fishData._id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=fishData.name%>" required/><br/>
-        Scientific Name: <input type="scientificName" name="scientificName" value="<%=fishData.scientificName%>"/><br/>
-        Description: <input type="text" name="description" value="<%=fishData.description%>" required/><br/>
-        Animal Type: <input type="text" name="animalType" value="<%=fishData.animalType%>" required/><br/>
-        Range: <input type="text" name="range" value="<%=fishData.range%>" required/><br/>
-        Image URL: <input type="url" name="img" value="<%=fishData.img%>"/><br/>
-        Number: <input type="number" name="number" value="<%=fishData.number%>" required/><br/>
-        Diet: <input type="text" name="diet" value="<%=fishData.diet%>"/><br/>
-        Size: <input type="text" name="size" value="<%=fishData.size%>"/><br/>
+        <div class="form-row-normal">
+          <h5>Name:</h5><input type="text" name="name" value="<%=fishData.name%>" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Scientific Name:</h5><input type="scientificName" name="scientificName" value="<%=fishData.scientificName%>"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Animal Type:</h5><input type="text" name="animalType" value="<%=fishData.animalType%>" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Range:</h5><input type="text" name="range" value="<%=fishData.range%>" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Image URL:</h5> <input type="url" name="img" value="<%=fishData.img%>"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Number: </h5><input type="number" name="number" value="<%=fishData.number%>" required/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Diet:</h5><input type="text" name="diet" value="<%=fishData.diet%>"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Size:</h5><input type="text" name="size" value="<%=fishData.size%>"/>
+        </div>
+        <div class="form-row-normal">
+          <h5>Description:</h5><input type="text" name="description" value="<%=fishData.description%>" required/>
+        </div>
 
         <input class='form-button' type="submit" value="Submit Changes"/>
       </form>
