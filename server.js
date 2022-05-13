@@ -76,11 +76,13 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // })
 
 //--- UPDATE ROUTE
-// app.put('/:id', (req, res) => {
-//   Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
-//     res.redirect('/aquarium')
-//   })
-// })
+app.put('/:id', (req, res) => {
+  Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
+    Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
+      res.redirect('/')
+    })
+  })
+})
 
 //--- SEED ROUTE
 // app.get('/seed', (req, res) => {
