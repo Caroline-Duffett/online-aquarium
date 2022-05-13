@@ -65,10 +65,10 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //---Test Route
-//localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
-});
+// //localhost:3000
+// app.get('/' , (req, res) => {
+//   res.send('Hello World!');
+// });
 
 //--- NEW ROUTE
 // app.get('/aquarium/new', (req, res) => {
