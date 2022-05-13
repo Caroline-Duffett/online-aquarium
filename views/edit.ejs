@@ -8,14 +8,14 @@
     <div class='form-wrapper'>
       <h1>Edit: <%= fishData.name %> </h1>
 
-      <form class="edit-fish-form" action="/<%=fishData._id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=fishData.name%>"/><br/>
+      <form class="fish-form" action="/<%=fishData._id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=fishData.name%>" required/><br/>
         Scientific Name: <input type="scientificName" name="scientificName" value="<%=fishData.scientificName%>"/><br/>
-        Description: <input type="text" name="description" value="<%=fishData.description%>"/><br/>
-        Animal Type: <input type="text" name="animalType" value="<%=fishData.animalType%>"/><br/>
-        Range: <input type="text" name="range" value="<%=fishData.range%>"/><br/>
+        Description: <input type="text" name="description" value="<%=fishData.description%>" required/><br/>
+        Animal Type: <input type="text" name="animalType" value="<%=fishData.animalType%>" required/><br/>
+        Range: <input type="text" name="range" value="<%=fishData.range%>" required/><br/>
         Image URL: <input type="url" name="img" value="<%=fishData.img%>"/><br/>
-        Number: <input type="number" name="number" value="<%=fishData.number%>"/><br/>
+        Number: <input type="number" name="number" value="<%=fishData.number%>" required/><br/>
         Diet: <input type="text" name="diet" value="<%=fishData.diet%>"/><br/>
         Size: <input type="text" name="size" value="<%=fishData.size%>"/><br/>
 

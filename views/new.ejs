@@ -5,6 +5,22 @@
     <title>New Page</title>
   </head>
   <body>
-    <h1>New Page</h1>
+    <div class='form-wrapper'>
+      <h1>Create New Animal</h1>
+
+      <form class="new-fish-form" action="/" method="POST">
+        Name: <input type="text" name="name" required/><br/>
+        Scientific Name: <input type="scientificName" name="scientificName"/><br/>
+        Description: <input type="text" name="description" required/><br/>
+        Animal Type: <input type="text" name="animalType" required/><br/>
+        Range: <input type="text" name="range" required/><br/>
+        Image URL: <input type="url" name="img"/><br/>
+        Number: <input type="number" name="number" required/><br/>
+        Diet: <input type="text" name="diet"/><br/>
+        Size: <input type="text" name="size"/><br/>
+
+        <input class='form-button' type="submit" value="Create Animal"/>
+      </form>
+    </div>
   </body>
 </html>

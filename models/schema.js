@@ -3,13 +3,13 @@ const Schema = mongoose.Schema
 
 const fishSchema = new Schema (
   {
-    name: {type: String, Required: true},
+    name: {type: String, required: true},
     scientificName: String,
-    description: {type: String, Required: true},
-    animalType: {type: String, Required: true},
-    range: {type: String, Required: true},
+    description: {type: String, required: true},
+    animalType: {type: String, required: true},
+    range: {type: String, required: true},
     img: String,
-    number: {type: Number, Required: true},
+    number: {type: Number, required: true},
     diet: [String],
     size: String
   }
