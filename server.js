@@ -83,11 +83,11 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // })
 
 //--- SEED ROUTE
-// app.get('/seed', (req, res) => {
-//   Fish.create(fishSeed, (err, data) => {
-//     res.redirect('/aquarium')
-//   })
-// })
+app.get('/seed', (req, res) => {
+  Fish.create(fishSeed, (err, data) => {
+    res.redirect('/')
+  })
+})
 
 //--- INDEX ROUTE
 app.get('/', (req, res) => {

@@ -8,7 +8,7 @@ module.exports = [
     img: 'https://i.imgur.com/oqefxxZ.jpg',
     number: 8,
     diet: ['squid', 'fish', 'crustaceans'],
-    Size: '6-12 feet'
+    size: '6-12 feet'
   },
   {
     name: 'Giant Pacific Octopus',
@@ -19,7 +19,7 @@ module.exports = [
     img: 'https://i.imgur.com/2ARqBhO.png',
     number: 2,
     diet: ['clams', 'shrimp', 'crabs', 'snails', 'other octopuses', 'fish'],
-    Size: '45-65 pounds'
+    size: '45-65 pounds'
   },
   {
     name: 'Scalloped Hammerhead Shark',
@@ -30,7 +30,7 @@ module.exports = [
     img: 'https://i.imgur.com/lr3ThbN.png',
     number: 1,
     diet: ['stringrays', 'crustaceans', 'fish', 'squid'],
-    Size: 'Can reach 14 feet'
+    size: 'Can reach 14 feet'
   },
   {
     name: 'Green Turtle',
@@ -41,7 +41,7 @@ module.exports = [
     img: 'https://i.imgur.com/g7pOsyB.png',
     number: 3,
     diet: ['macroalgae', 'sea grass'],
-    Size: '3-4 feet'
+    size: '3-4 feet'
   },
   {
     name: "Lion's Mane Jelly",
@@ -52,7 +52,7 @@ module.exports = [
     img: 'https://i.imgur.com/zdG7v5I.png',
     number: 1,
     diet: ['zooplankton', 'moon jellies', 'small fish', 'small crustaceans'],
-    Size: '1 1/2 - 8 feet in diameter. Their tenticals can grow to be more than 100 feet.'
+    size: '1 1/2 - 8 feet in diameter. Their tenticals can grow to be more than 100 feet.'
   },
   {
     name: 'Lined Seahorse',
@@ -63,7 +63,7 @@ module.exports = [
     img: 'https://i.imgur.com/hHW9SyV.png',
     number: 15,
     diet: ['shrimp larvae', 'worms', 'copepods', 'small snails', 'amphipods'],
-    Size: '2-4 inches'
+    size: '2-4 inches'
   },
   {
     name: 'Percula Clownfish',
@@ -74,7 +74,7 @@ module.exports = [
     img: 'https://i.imgur.com/1vK59yG.png',
     number: 10,
     diet: ['algae', 'worms', 'small crustaceans', 'zooplankton'],
-    Size: 'About 3 inches'
+    size: 'About 3 inches'
   },
   {
     name: 'Porcupinefish',
@@ -85,7 +85,7 @@ module.exports = [
     img: 'https://i.imgur.com/37Rv8Es.png',
     number: 3,
     diet: ['sea urchins', 'snails', 'clams', 'gastropods'],
-    Size: 'Can grow to be 3 feet'
+    size: 'Can grow to be 3 feet'
   },
   {
     name: 'Reticulated Whiptail Ray',
@@ -96,7 +96,7 @@ module.exports = [
     img: 'https://i.imgur.com/7erh4WG.jpg',
     number: 4,
     diet: ['crabs', 'small fish', 'shrimp', 'jellyfish'],
-    Size: '6-7 feet'
+    size: '6-7 feet'
   },
   {
     name: 'California Moray',
@@ -107,6 +107,6 @@ module.exports = [
     img: 'https://i.imgur.com/pNoEBHe.jpg',
     number: 2,
     diet: ['small fish','sea urchins', 'lobsters', 'crabs', 'octopuses'],
-    Size: 'Up to five feet'
+    size: 'Up to five feet'
   },
 ]

@@ -11,7 +11,7 @@ const fishSchema = new Schema (
     img: String,
     number: {type: Number, Required: true},
     diet: [String],
-    Size: String
+    size: String
   }
 )
 
