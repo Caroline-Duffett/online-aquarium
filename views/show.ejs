@@ -51,7 +51,15 @@
       </div>
 
       <nav id='show-page-nav'>
+
         <a href="/"/><button type="button" name="button">Back to Main</button></a>
+
+        <a href="/<%=fishData._id%>/edit"/> <button type="button" name="button">Edit</button></a>
+
+        <form action='/<%=fishData._id%>?_method=DELETE' method='POST'>
+          <input type="submit" value="Delete">
+        </form>
+
       </nav>
 
     </div>

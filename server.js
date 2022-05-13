@@ -83,11 +83,11 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // })
 
 //--- SEED ROUTE
-app.get('/seed', (req, res) => {
-  Fish.create(fishSeed, (err, data) => {
-    res.redirect('/')
-  })
-})
+// app.get('/seed', (req, res) => {
+//   Fish.create(fishSeed, (err, data) => {
+//     res.redirect('/')
+//   })
+// })
 
 //--- INDEX ROUTE
 app.get('/', (req, res) => {
@@ -108,15 +108,15 @@ app.get('/', (req, res) => {
 // })
 
 //--- Edit ROUTE
-// app.get('/:id/edit', (req, res) => {
-//   Fish.findById(req.params.id, (err, foundFish) => {
-//     res.render('edit.ejs',
-//       {
-//         fishData: foundFish,
-//       }
-//     )
-//   })
-// })
+app.get('/:id/edit', (req, res) => {
+  Fish.findById(req.params.id, (err, foundFish) => {
+    res.render('edit.ejs',
+      {
+        fishData: foundFish,
+      }
+    )
+  })
+})
 
 //--- SHOW ROUTE
 app.get('/:id', (req, res) => {
@@ -129,12 +129,12 @@ app.get('/:id', (req, res) => {
   })
 })
 
-// //--- DESTROY (DELETE) ROUTE
-// app.delete('/:id', (req, res) => {
-//   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
-//     res.redirect('/aquarium')
-//   })
-// })
+//--- DESTROY (DELETE) ROUTE
+app.delete('/:id', (req, res) => {
+  Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
+    res.redirect('/')
+  })
+})
 
 
 
