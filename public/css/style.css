@@ -463,7 +463,12 @@ body {
   }
 
   .show-page-nav {
-
+    background-color: purple;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 3%;
   }
 
 
