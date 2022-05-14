@@ -51,6 +51,9 @@ router.get('/new', (req, res) => {
 
 //--- UPDATE ROUTE
 router.put('/:id', (req, res) => {
+  if (req.body.img === '') {
+    req.body.img = 'https://i.imgur.com/EXotp4G.png';
+  }
   Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
       res.redirect('/')
