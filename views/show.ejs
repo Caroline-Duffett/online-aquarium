@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Show Page</title>
     <link rel="stylesheet" href="/css/style.css">
@@ -23,8 +24,8 @@
             <p>Description: <%= fishData.description %></p>
           </div>
         </div>
-        <div class="bottom-info-block">
-          <div class="right-side">
+        <div class="right-side">
+          <div class="info">
             <div class="animalType-con">
               <p>Animal Type: <%= fishData.animalType %></p>
             </div>
@@ -47,11 +48,11 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
 
       <nav id='show-page-nav'>
 
-        <a href="/"/><button type="button" name="button">Back to Main</button></a>
+        <a href="/"/><button type="button" name="button">Back to Home</button></a>
 
         <a href="/<%=fishData._id%>/edit"/> <button type="button" name="button">Edit</button></a>
 
