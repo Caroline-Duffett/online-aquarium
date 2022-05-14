@@ -4,52 +4,50 @@
     <meta charset="utf-8">
     <title>Show Page</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="fish-info-wrapper">
+      <div class="fish-name-con">
+        <h2 id='commonName'><%= fishData.name %></h2>
+        <h4 id='scienceName'><%= fishData.scientificName %></h4>
+      </div>
       <div class="fish-info-list">
-        <div class="top-info-block">
-          <div class="fish-name-con">
-            <h2 id='commonName'><%= fishData.name %></h2>
-            <h4 id='scienceName'><%= fishData.scientificName %></h4>
-          </div>
-
+        <div class="img-description">
           <div class="fish-img-con">
             <img src="<%= fishData.img %>" alt="">
           </div>
-
-          <div class="fish-animalType-con">
-            <p>Animal Type: <%= fishData.animalType %></p>
-          </div>
-
-          <div class="fish-quantity-con">
-            <p>At the aquarium: <%= fishData.number %></p>
-          </div>
-        </div>
-
-        <div class="bottom-info-block">
           <div class="fish-description-con">
             <p>Description: <%= fishData.description %></p>
           </div>
-
-          <div class="fish-range-con">
-            <p>Range: <%= fishData.range %></p>
-          </div>
-
-          <div class="fish-size-con">
-            <p>Size: <%= fishData.size %></p>
-          </div>
-
-          <div class="fish-diet-con">
-            <h4>Diet:</h4>
-            <ul>
-              <% for (let j = 0; j < fishData.diet.length; j++) { %>
-                <li><%= fishData.diet[j] %></li>
-              <% } %>
-            </ul>
+        </div>
+        <div class="bottom-info-block">
+          <div class="right-side">
+            <div class="animalType-con">
+              <p>Animal Type: <%= fishData.animalType %></p>
+            </div>
+            <div class="fish-quantity-con">
+              <p>Have at the aquarium: <%= fishData.number %></p>
+            </div>
+            <div class="fish-range-con">
+              <p>Range: <%= fishData.range %></p>
+            </div>
+            <div class="fish-size-con">
+              <p>Size: <%= fishData.size %></p>
+            </div>
+            <div class="fish-diet-con">
+              <h4>Diet:</h4>
+              <ul>
+                <% for (let j = 0; j < fishData.diet.length; j++) { %>
+                  <li><%= fishData.diet[j] %></li>
+                <% } %>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+    </div>
 
       <nav id='show-page-nav'>
 

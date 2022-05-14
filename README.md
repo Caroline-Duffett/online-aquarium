@@ -59,3 +59,9 @@ The seed information sources:
   Eel Photo: https://www.montereybayaquarium.org/animals/animals-a-to-z/california-moray
   Photo URL: https://i.imgur.com/58HzdEW.png
   Old Photo URL: https://i.imgur.com/pNoEBHe.jpg
+
+
+  Photo not available: https://www.123rf.com/stock-photo/not_available.html?sti=nxn1nh55a9piwt54rf|
+  Photo: https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6
+  URL: https://i.imgur.com/EXotp4G.png
+  Old photo URL: https://i.imgur.com/hTO0BjZ.png
