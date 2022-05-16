@@ -65,3 +65,10 @@ The seed information sources:
   Photo: https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6
   URL: https://i.imgur.com/EXotp4G.png
   Old photo URL: https://i.imgur.com/hTO0BjZ.png
+
+
+
+  Auth:
+  https://www.topcoder.com/thrive/articles/authentication-and-authorization-in-express-js-api-using-jwt
+  ex 1: https://github.com/hunterwallen/1LINR
+  ex 2: 

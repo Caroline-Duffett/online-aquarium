@@ -39,6 +39,17 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 
 //___________________
+//For jQuery to work
+//___________________
+let jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const { document } = (new JSDOM('')).window;
+global.document = document;
+let $ = require("jquery")(window);
+
+
+//___________________
 //Models
 //___________________
 //const fishSeed = require('./models/seed.js') //seed data (original)
@@ -308,4 +319,40 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //
 // .show-page-nav {
 //
+// }
+
+
+
+
+//original json:
+// {
+//   "name": "application",
+//   "version": "1.0.0",
+//   "engines": {
+//     "node": "16.14.2"
+//   },
+//   "description": "",
+//   "main": "server.js",
+//   "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1",
+//     "start": "node server.js"
+//   },
+//   "repository": {
+//     "type": "git",
+//     "url": "git+https://github.com/StudentCD/application.git"
+//   },
+//   "keywords": [],
+//   "author": "",
+//   "license": "ISC",
+//   "bugs": {
+//     "url": "https://github.com/StudentCD/application/issues"
+//   },
+//   "homepage": "https://github.com/StudentCD/application#readme",
+//   "dependencies": {
+//     "dotenv": "^16.0.1",
+//     "ejs": "^3.1.8",
+//     "express": "^4.18.1",
+//     "method-override": "^3.0.0",
+//     "mongoose": "^6.3.3"
+//   }
 // }
