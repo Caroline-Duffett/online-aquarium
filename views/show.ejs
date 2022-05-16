@@ -46,15 +46,16 @@
           </div>
         </div>
       </div>
+      <nav class='show-page-bottom-nav'>
+        <a id="edit-link" href="/<%=fishData._id%>/edit"/> <button id="edit-btn"  type="button" name="button">Edit</button></a>
+        <form id="form-link" action='/<%=fishData._id%>?_method=DELETE' method='POST'>
+          <input id="delete-btn" type="submit" value="Delete">
+        </form>
+      </nav>
     </div>
     <footer>
       <div class="footer-div">
-        <nav class='show-page-bottom-nav'>
-          <a id="edit-link" href="/<%=fishData._id%>/edit"/> <button id="edit-btn"  type="button" name="button">Edit</button></a>
-          <form id="form-link" action='/<%=fishData._id%>?_method=DELETE' method='POST'>
-            <input id="delete-btn" type="submit" value="Delete">
-          </form>
-        </nav>
+
       </div>
     </footer>
   </body>

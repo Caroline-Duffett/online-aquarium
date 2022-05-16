@@ -425,3 +425,23 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //___________________
 //const fishSeed = require('./models/seed.js') //seed data (original)
 //const Fish = require('./models/schema.js') //schema (original)
+
+
+//Took out footer
+// <footer>
+//   <div class="footer-div">
+//
+//   </div>
+// </footer>
+
+// /*
+// footer {
+//   background-color: #ebf5fb;
+//   width: 100%;
+//   bottom: 0px;
+//   left: 0px;
+//   height: 85px;
+//   box-shadow: 0 -1px 4px rgba(0,0,0,0.4);
+//   position: absolute;
+// }
+// */
