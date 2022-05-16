@@ -4,17 +4,14 @@
     <%- include('./partials/head.ejs') %>
   </head>
   <body>
+    <header>
+      <%- include('./partials/header.ejs') %>
+    </header>
     <div class="fish-info-wrapper">
       <div class="fish-name-con">
         <h2 id='commonName'><%= fishData.name %></h2>
         <h4 id='scienceName'><%= fishData.scientificName %></h4>
       </div>
-      <nav class='show-page-upper-nav'>
-        <a href="/<%=fishData._id%>/edit"/> <button type="button" name="button">Edit</button></a>
-        <form action='/<%=fishData._id%>?_method=DELETE' method='POST'>
-          <input type="submit" value="Delete">
-        </form>
-      </nav>
       <div class="fish-info-list">
         <div class="img-description">
           <div class="fish-img-con">
@@ -50,9 +47,15 @@
         </div>
       </div>
     </div>
-
-    <nav class='show-page-bottom-nav'>
-      <a href="/"/><button type="button" name="button">Back to Home</button></a>
-    </nav>
+    <footer>
+      <div class="footer-div">
+        <nav class='show-page-bottom-nav'>
+          <a id="edit-link" href="/<%=fishData._id%>/edit"/> <button id="edit-btn"  type="button" name="button">Edit</button></a>
+          <form id="form-link" action='/<%=fishData._id%>?_method=DELETE' method='POST'>
+            <input id="delete-btn" type="submit" value="Delete">
+          </form>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

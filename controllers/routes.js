@@ -44,6 +44,7 @@ router.post('/', (req, res) => {
   })
 })
 
+
 //--- NEW ROUTE
 router.get('/new', (req, res) => {
   res.render('new.ejs')
@@ -91,3 +92,99 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router
+
+
+
+
+
+//---- post graveyard
+//Try 1:
+// router.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//
+//   Fish.create(req.body, (err, createdFish) => {
+//     //res.send(createdFish)
+//     const update = () => {
+//       Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, updatedFish) => {
+//         //res.redirect('/')
+//         res.send(updatedFish)
+//       })
+//     }
+//     update()
+//   })
+// })
+
+
+//Try 2:
+// router.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//
+//   Fish.create(req.body, (err, createdFish) => {
+//     //res.send(createdFish)
+//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, updatedFish) => {
+//       //res.redirect('/')
+//       res.send(updatedFish)
+//     })
+//   })
+// })
+
+
+//Try 3:
+// router.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//
+//   Fish.create(req.body, (err, createdFish) => {
+//     //res.send(createdFish)
+//   })
+//
+//   Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, updatedFish) => {
+//     //res.redirect('/')
+//     res.send(updatedFish)
+//   })
+// })
+
+
+//Try 4:
+// router.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//   Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, updatedFish) => {
+//     Fish.create(req.body, (err, createdFish) => {
+//       res.send(createdFish)
+//     })
+//   })
+// })
+
+
+//Try 5:
+// router.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//   Fish.create(req.body, (err, createdFish) => {
+//     //res.send(createdFish)
+//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, updatedFish) => {
+//       res.send(updatedFish)
+//     })
+//   })
+// })
+
+
+//Try 6:
+// router.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//   Fish.create(req.body, (err, createdFish) => {
+//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, createdFish) => {
+//       res.redirect('/')
+//     })
+//   })
+// })
