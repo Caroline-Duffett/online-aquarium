@@ -39,24 +39,6 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 
 //___________________
-//For jQuery to work
-//___________________
-let jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-const { window } = new JSDOM();
-const { document } = (new JSDOM('')).window;
-global.document = document;
-let $ = require("jquery")(window);
-
-
-//___________________
-//Models
-//___________________
-//const fishSeed = require('./models/seed.js') //seed data (original)
-//const Fish = require('./models/schema.js') //schema (original)
-
-
-//___________________
 //Middleware
 //___________________
 
@@ -71,93 +53,6 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 
 app.use('/', controller) //not in original
-
-
-
-// //___________________
-// // Routes
-// //___________________
-// //---Test Route
-// // //localhost:3000
-// // app.get('/' , (req, res) => {
-// //   res.send('Hello World!');
-// // });
-//
-// //--- SEED ROUTE
-// app.get('/seed', (req, res) => {
-//   Fish.create(fishSeed, (err, data) => {
-//     res.redirect('/')
-//   })
-// })
-//
-// //--- INDEX ROUTE
-// app.get('/', (req, res) => {
-//   Fish.find({}, (err, allFish) => {
-//     res.render('index.ejs',
-//       {
-//         fishData: allFish,
-//       }
-//     )
-//   })
-// })
-//
-// //--- Create ROUTE
-// app.post('/', (req, res) => {
-//   if (req.body.img === '') {
-//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
-//   }
-//   Fish.create(req.body, (err, createdFish) => {
-//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, createdFish) => {
-//       res.redirect('/')
-//     })
-//   })
-// })
-//
-// //--- NEW ROUTE
-// app.get('/new', (req, res) => {
-//   res.render('new.ejs')
-// })
-//
-// //--- UPDATE ROUTE
-// app.put('/:id', (req, res) => {
-//   Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
-//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
-//       res.redirect('/')
-//     })
-//   })
-// })
-//
-// //--- SHOW ROUTE
-// app.get('/:id', (req, res) => {
-//   Fish.findById(req.params.id, (err, foundFish) => {
-//     res.render('show.ejs',
-//       {
-//         fishData: foundFish,
-//       }
-//     )
-//   })
-// })
-//
-// //--- Edit ROUTE
-// app.get('/:id/edit', (req, res) => {
-//   Fish.findById(req.params.id, (err, foundFish) => {
-//     res.render('edit.ejs',
-//       {
-//         fishData: foundFish,
-//       }
-//     )
-//   })
-// })
-//
-// //--- DESTROY (DELETE) ROUTE
-// app.delete('/:id', (req, res) => {
-//   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
-//     res.redirect('/')
-//   })
-// })
-
-
-
 
 //___________________
 //Listener
@@ -356,3 +251,177 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     "mongoose": "^6.3.3"
 //   }
 // }
+
+
+
+//jquery dropdown styling:
+// .hamburger-lines-div {
+//   background-color: pink;
+//   position: fixed;
+//   align-self: flex-end;
+// }
+//
+// .hamburger-lines {
+//  background-color: black;
+//  padding: 12px;
+//  display: flex;
+//  height: 26px;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  width: 30px;
+// }
+//
+// .line {
+//   height: 4px;
+//   width: 30px;
+//   border-radius: 10px;
+//   background: white;
+// }
+//
+// .drop-menu {
+//   display: flex;
+//   flex-direction: column;
+//   align-self: flex-end;
+// }
+
+//jquerydropdown ejs:
+// <div class="hamburger-lines-div">
+//   <div id='open' class="hamburger-lines">
+//     <span class="line"></span>
+//     <span class="line"></span>
+//     <span class="line"></span>
+//   </div>
+//   <div id='close' class="hamburger-lines">
+//     <span class="line"></span>
+//     <span class="line"></span>
+//     <span class="line"></span>
+//   </div>
+// </div>
+// <div id="drop" class="drop-menu">
+//   <a href="/<%=fishData._id%>/edit"/> <button type="button" name="button">Edit</button></a>
+//   <form action='/<%=fishData._id%>?_method=DELETE' method='POST'>
+//     <input type="submit" value="Delete">
+//   </form>
+// </div>
+// <script>
+//   $(() => {
+//
+//     $('#close').hide()
+//     $('.drop-menu').hide()
+//
+//     $('#open').click( () => {
+//       $('#open').hide()
+//       $('#close').show()
+//       $('.drop-menu').show()
+//     })
+//
+//     $('#close').click( () => {
+//       $('#close').hide()
+//       $('#open').show()
+//       $('.drop-menu').hide()
+//     })
+//   });
+// </script>
+
+// //___________________
+// //For jQuery to work
+// //___________________
+// let jsdom = require("jsdom");
+// const { JSDOM } = jsdom;
+// const { window } = new JSDOM();
+// const { document } = (new JSDOM('')).window;
+// global.document = document;
+// let $ = require("jquery")(window);
+
+//in head.ejs: <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+
+//Original Routes:
+// //___________________
+// // Routes
+// //___________________
+// //---Test Route
+// // //localhost:3000
+// // app.get('/' , (req, res) => {
+// //   res.send('Hello World!');
+// // });
+//
+// //--- SEED ROUTE
+// app.get('/seed', (req, res) => {
+//   Fish.create(fishSeed, (err, data) => {
+//     res.redirect('/')
+//   })
+// })
+//
+// //--- INDEX ROUTE
+// app.get('/', (req, res) => {
+//   Fish.find({}, (err, allFish) => {
+//     res.render('index.ejs',
+//       {
+//         fishData: allFish,
+//       }
+//     )
+//   })
+// })
+//
+// //--- Create ROUTE
+// app.post('/', (req, res) => {
+//   if (req.body.img === '') {
+//     req.body.img = 'https://i.imgur.com/EXotp4G.png';
+//   }
+//   Fish.create(req.body, (err, createdFish) => {
+//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, createdFish) => {
+//       res.redirect('/')
+//     })
+//   })
+// })
+//
+// //--- NEW ROUTE
+// app.get('/new', (req, res) => {
+//   res.render('new.ejs')
+// })
+//
+// //--- UPDATE ROUTE
+// app.put('/:id', (req, res) => {
+//   Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
+//     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
+//       res.redirect('/')
+//     })
+//   })
+// })
+//
+// //--- SHOW ROUTE
+// app.get('/:id', (req, res) => {
+//   Fish.findById(req.params.id, (err, foundFish) => {
+//     res.render('show.ejs',
+//       {
+//         fishData: foundFish,
+//       }
+//     )
+//   })
+// })
+//
+// //--- Edit ROUTE
+// app.get('/:id/edit', (req, res) => {
+//   Fish.findById(req.params.id, (err, foundFish) => {
+//     res.render('edit.ejs',
+//       {
+//         fishData: foundFish,
+//       }
+//     )
+//   })
+// })
+//
+// //--- DESTROY (DELETE) ROUTE
+// app.delete('/:id', (req, res) => {
+//   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
+//     res.redirect('/')
+//   })
+// })
+
+//___________________
+//Models (need in original)
+//___________________
+//const fishSeed = require('./models/seed.js') //seed data (original)
+//const Fish = require('./models/schema.js') //schema (original)

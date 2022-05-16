@@ -489,35 +489,6 @@ body {
     margin-top: 3%;
   }
 
-  .hamburger-lines-div {
-    background-color: pink;
-    position: fixed;
-    align-self: flex-end;
-  }
-
-  .hamburger-lines {
-   background-color: black;
-   padding: 12px;
-   display: flex;
-   height: 26px;
-   flex-direction: column;
-   justify-content: space-between;
-   width: 30px;
-  }
-
-  .line {
-    height: 4px;
-    width: 30px;
-    border-radius: 10px;
-    background: white;
-  }
-
-  .drop-menu {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-  }
-
   /* New and Edit Form Page */
   .form-wrapper {
     width: 50%;
