@@ -1,12 +1,11 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router();
 const fishSeed = require('../models/seed.js') //seed data
 const Fish = require('../models/schema.js') //schema
 
 
-
 //___________________
-// Routes
+// Routes (CRUD)
 //___________________
 //---Test Route
 // //localhost:3000
@@ -31,6 +30,7 @@ router.get('/', (req, res) => {
     )
   })
 })
+
 
 //--- Create ROUTE
 router.post('/', (req, res) => {
@@ -62,16 +62,7 @@ router.put('/:id', (req, res) => {
   })
 })
 
-//--- SHOW ROUTE
-router.get('/:id', (req, res) => {
-  Fish.findById(req.params.id, (err, foundFish) => {
-    res.render('show.ejs',
-      {
-        fishData: foundFish,
-      }
-    )
-  })
-})
+
 
 //--- Edit ROUTE
 router.get('/:id/edit', (req, res) => {
@@ -88,6 +79,17 @@ router.get('/:id/edit', (req, res) => {
 router.delete('/:id', (req, res) => {
   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
     res.redirect('/')
+  })
+})
+
+//--- SHOW ROUTE
+router.get('/:id', (req, res) => {
+  Fish.findById(req.params.id, (err, foundFish) => {
+    res.render('show.ejs',
+      {
+        fishData: foundFish,
+      }
+    )
   })
 })
 

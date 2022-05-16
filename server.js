@@ -9,6 +9,9 @@ const app = express ()
 const db = mongoose.connection
 require('dotenv').config()
 
+const userController = require('./controllers/users_controller.js') //for Auth
+
+
 
 //___________________
 //Port
@@ -52,7 +55,25 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 
-app.use('/', controller) //not in original
+
+app.use('/users', userController) //For Auth
+
+//For Auth
+// app.use(
+//   session({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: false
+//   })
+// )
+
+//___________________
+//Routes
+//___________________
+app.use('/', controller) //Crud Routes
+
+
+
 
 //___________________
 //Listener
@@ -420,11 +441,11 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //   })
 // })
 
-//___________________
-//Models (need in original)
-//___________________
-//const fishSeed = require('./models/seed.js') //seed data (original)
-//const Fish = require('./models/schema.js') //schema (original)
+// //___________________
+// //Models (need in original)
+// //___________________
+// const fishSeed = require('./models/seed.js') //seed data (original)
+// const Fish = require('./models/schema.js') //schema (original)
 
 
 //Took out footer
