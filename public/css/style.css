@@ -131,7 +131,7 @@
   }
 
 
-  /* Index Page */
+  /* Aquarium Index Page */
   header {
     background-color: #ebf5fb;
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
@@ -210,6 +210,11 @@
     padding-right: 2.5%;
   }
 
+  #aquarium-index-header {
+    width: 100%;
+    text-align: center;
+  }
+
   .fish-wrapper {
     margin: 1%;
     width: 30%;
@@ -248,7 +253,7 @@
 
 
 
-  /* Show Page */
+  /* Aquarium Show Page */
   .fish-info-wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -443,7 +448,7 @@
   }
 
 
-  /* New and Edit Form Page */
+  /* Aquarium New and Edit Form Page */
   .form-wrapper {
     width: 50%;
     min-width: 300px;
@@ -495,7 +500,7 @@
   }
 }
 
-  /* Map Page */
+  /* Aquarium Map Page */
   #maps-h1 {
     text-align: center;
   }
