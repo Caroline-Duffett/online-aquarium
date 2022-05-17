@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>Login</h1>
-    <form class="login-form" action="/sessions" method="POST">
-      <div class="row">
-        <h5>Username:</h5><input type="text" name="username" placeholder="Username" required/>
-      </div>
-      <div class="row">
-        <h5>Password:</h5><input type="password" name="password" placeholder="Password" required/>
-      </div>
+    <header>
+      <%- include('../partials/notsignedinheader.ejs') %>
+    </header>
+    <h1 id="login-h1">Login</h1>
+    <div class="login-form-div">
+      <form class="login-form" action="/sessions" method="POST">
+        <div class="row">
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username" required/>
+        </div>
+        <div class="row">
+          <label for="password">Password:</label>
+          <input type="password" name="password" placeholder="Password" required/>
+        </div>
 
-      <input class='login-submit' type="submit" value="Login"/>
-    </form>
+        <input class='login-submit' type="submit" value="Login"/>
+      </form>
+    </div>
   </body>
 </html>

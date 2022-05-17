@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Login</title>
+    <%- include('./partials/head.ejs') %>
   </head>
   <body>
-
-    <a href="/users/new">Create Account</a>
-    <a href="/sessions/new">Login</a>
-
+    <header>
+      <h1 id='index-h1'>Aquarium</h1>
+    </header>
+    <div class="login-page-headers">
+        <h1>Welcome to the Aquarium!</h1>
+        <h4>Please sign in to continue</h4>
+    </div>
+    <div class="login-page-flexbox">
+      <div class="login-page-buttons">
+        <a href="/sessions/new"><button id="login-btn-login" type="button" name="login-btn-login">Login</button></a>
+        <a href="/users/new"><button id="create-btn-login" type="button" name="create-btn-login">Create Account</button></a>
+      </div>
+    </div>
   </body>
 </html>

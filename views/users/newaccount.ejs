@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>Create Account</h1>
-    <form class="new-account-form" action="/users" method="POST">
-      <div class="row">
-        <h5>Username (must be atleast 4 characters):</h5><input type="text" name="username" placeholder="Username" minlength="4"
-        maxlength="15" unique=true required/>
-      </div>
-      <div class="row">
-        <h5>Password (must be atleast 8 characters):</h5><input type="password" name="password" placeholder="Password" minlength="8"
-        maxlength="16" required/>
-      </div>
+    <header>
+      <%- include('../partials/notsignedinheader.ejs') %>
+    </header>
+    <h1 id="create-h1" >Create Account</h1>
+    <div class="create-form-div">
+      <form class="new-account-form" action="/users" method="POST">
+        <div class="row">
+          <label for="username">Username (must be atleast 4 characters):</label>
+          <input type="text" name="username" placeholder="Username" minlength="4" maxlength="15" unique=true required/>
+        </div>
+        <div class="row">
+          <label for="password">Password (must be atleast 8 characters):</label>
+          <input type="password" name="password" placeholder="Password" minlength="8" maxlength="16" required/>
+        </div>
 
-      <input class='createAccount-submit' type="submit" value="Create Account"/>
-    </form>
+        <input class='createAccount-submit' type="submit" value="Create Account"/>
+      </form>
+    </div>
   </body>
 </html>
