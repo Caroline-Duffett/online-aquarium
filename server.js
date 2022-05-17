@@ -66,7 +66,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 
 
-app.use('/users', userController) //For Auth
+
 
 //For Auth
 // app.use(
@@ -81,6 +81,8 @@ app.use('/users', userController) //For Auth
 //Routes
 //___________________
 app.use('/aquarium', controller) //Crud Routes
+
+app.use('/', userController) //For create account
 
 
 
