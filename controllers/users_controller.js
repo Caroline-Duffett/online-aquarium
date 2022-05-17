@@ -8,7 +8,10 @@ const User = require('../models/users.js') //schema for username and password
 
 //Brings user to signup page
 users.get('/new', (req, res) => {
-  res.render('../views/users/newaccount.ejs')
+  res.render('../views/users/newaccount.ejs',
+  {
+    currentUser: req.session.currentUser,
+  })
 })
 
 //Created new user
