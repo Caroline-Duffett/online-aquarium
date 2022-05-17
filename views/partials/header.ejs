@@ -2,8 +2,8 @@
 
 <h1 id='index-h1'>Aquarium</h1>
 
-<p>username: <%=currentUser.currentUser.username%> </p>
+<p id="welcome-message" >Welcome <%=currentUser.currentUser.username%> </p>
 
-<form action="/sessions/?_method=DELETE" method="POST">
-  <input type="submit" value="Log Out" />
+<form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+  <input id="logout-form" type="submit" value="Log Out" />
 </form>

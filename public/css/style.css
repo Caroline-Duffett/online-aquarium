@@ -173,8 +173,30 @@
   }
 
   #home-btn:hover {
-    background-color: #F2F2F2
-;
+    background-color: #F2F2F2;
+  }
+
+  #form-in-header {
+    width: 8%;
+    height: 85px;
+  }
+
+  #welcome-message {
+    margin-right: 2%;
+    font-size: 20px;
+  }
+
+  #logout-form {
+    background-color: #ebf5fb;
+    border: none;
+    border-left: solid gray;
+    font-size: 23px;
+    align-self: flex-end;
+    padding: 21% 20%;
+  }
+
+  #logout-form:hover {
+    background-color: #F2F2F2;
   }
 
   #create-button button {
@@ -439,7 +461,8 @@
     width: 50%;
     min-width: 300px;
     margin: 2em auto;
-    background-color: lightgrey;
+    background-color: #ebf5fb;
+    border: solid grey thin;
     border-radius: 2em;
     padding: 1.5em;
   }
