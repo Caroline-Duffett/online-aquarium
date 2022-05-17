@@ -2,14 +2,8 @@
 
 <h1 id='index-h1'>Aquarium</h1>
 
+<p>username: <%=currentUser.currentUser.username%> </p>
 
-<% const currentUser = req.session.currentUser %>
-
-<% if (currentUser) { %>
-  <form action="/sessions?_method=DELETE" method="POST">
-    <input type="submit" value="Log Out" />
-  </form>
-<% } else { %>
-  <a href="/users/new">Create Account</a>
-  <a href="/sessions/new">Login</a>
-<% } %>
+<form action="/sessions/?_method=DELETE" method="POST">
+  <input type="submit" value="Log Out" />
+</form>

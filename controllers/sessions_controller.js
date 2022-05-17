@@ -6,7 +6,7 @@ const User = require('../models/users.js')
 sessions.get('/new', (req, res) => {
   res.render('sessions/newsession.ejs',
   {
-    currentUser: req.session.currentUser
+    currentUser: req.session,
   })
 })
 
@@ -51,6 +51,7 @@ sessions.post('/', (req, res) => {
 sessions.delete('/', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/')
+    //res.send('session ended')
   })
 })
 

@@ -10,7 +10,7 @@ const User = require('../models/users.js') //schema for username and password
 users.get('/new', (req, res) => {
   res.render('../views/users/newaccount.ejs',
   {
-    currentUser: req.session.currentUser,
+    currentUser: req.session,
   })
 })
 

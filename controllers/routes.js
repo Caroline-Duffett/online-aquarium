@@ -4,6 +4,7 @@ const fishSeed = require('../models/seed.js') //seed data
 const Fish = require('../models/schema.js') //schema
 
 
+//Middleware
 const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
     return next()
@@ -11,6 +12,7 @@ const isAuthenticated = (req, res, next) => {
     res.redirect('/sessions/new')
   }
 }
+
 
 //___________________
 // Routes (CRUD)
@@ -24,20 +26,19 @@ const isAuthenticated = (req, res, next) => {
 //--- SEED ROUTE
 router.get('/seed', (req, res) => {
   Fish.create(fishSeed, (err, data) => {
-    res.redirect('/aquarium',
-    {
-      currentUser: req.session.currentUser,
-    })
+    res.redirect('/aquarium')
   })
 })
 
+
 //--- INDEX ROUTE
 router.get('/', (req, res) => {
+  console.log(req.session);
   Fish.find({}, (err, allFish) => {
     res.render('index.ejs',
       {
         fishData: allFish,
-        currentUser: req.session.currentUser,
+        currentUser: req.session,
       }
     )
   })
@@ -45,7 +46,7 @@ router.get('/', (req, res) => {
 
 
 //--- Create ROUTE
-router.post('/', (req, res) => {
+router.post('/', isAuthenticated, (req, res) => {
   if (req.body.img === '') {
     req.body.img = 'https://i.imgur.com/EXotp4G.png';
   }
@@ -58,15 +59,15 @@ router.post('/', (req, res) => {
 
 
 //--- NEW ROUTE
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
   res.render('new.ejs',
   {
-    currentUser: req.session.currentUser,
+    currentUser: req.session,
   })
 })
 
 //--- UPDATE ROUTE
-router.put('/:id', (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => {
   if (req.body.img === '') {
     req.body.img = 'https://i.imgur.com/EXotp4G.png';
   }
@@ -80,31 +81,31 @@ router.put('/:id', (req, res) => {
 
 
 //--- Edit ROUTE
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
     res.render('edit.ejs',
       {
         fishData: foundFish,
-        currentUser: req.session.currentUser,
+        currentUser: req.session,
       }
     )
   })
 })
 
 //--- DESTROY (DELETE) ROUTE
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
     res.redirect('/aquarium')
   })
 })
 
 //--- SHOW ROUTE
-router.get('/:id', (req, res) => {
+router.get('/:id', isAuthenticated, (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
     res.render('show.ejs',
       {
         fishData: foundFish,
-        currentUser: req.session.currentUser,
+        currentUser: req.session,
       }
     )
   })

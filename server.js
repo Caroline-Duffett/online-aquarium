@@ -10,12 +10,9 @@ const db = mongoose.connection
 require('dotenv').config()
 
 const userController = require('./controllers/users_controller.js') //for Auth new account
-
 const session = require('express-session')
-
 const sessionsController = require('./controllers/sessions_controller.js')
-
-
+const loginController = require('./controllers/login_controller.js')
 
 
 //___________________
@@ -25,14 +22,11 @@ const sessionsController = require('./controllers/sessions_controller.js')
 const PORT = process.env.PORT
 
 
-
-
 //___________________
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI
-
 
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose
@@ -41,13 +35,10 @@ mongoose.connect(MONGODB_URI , () => {
   console.log('connected to mongo')
 });
 
-
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI))
 db.on('disconnected', () => console.log('mongo disconnected'))
-
-
 
 
 //___________________
@@ -61,12 +52,9 @@ global.document = document;
 let $ = require("jquery")(window);
 
 
-
-
 //___________________
 //Middleware
 //___________________
-
 //use public folder for static assets
 app.use(express.static('public'))
 
@@ -77,16 +65,6 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 
-
-
-
-//___________________
-//Routes
-//___________________
-app.use('/aquarium', controller) //Crud Routes
-
-app.use('/users', userController) //For create account
-
 //For Auth
 app.use(
   session({
@@ -96,9 +74,14 @@ app.use(
   })
 )
 
+
+//___________________
+//Controllers
+//___________________
+app.use('/aquarium', controller) //Crud Routes
+app.use('/users', userController) //For create account
 app.use('/sessions', sessionsController) //for sessions
-
-
+app.use('/', loginController) //For login
 
 
 //___________________
@@ -297,3 +280,19 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //   margin-right: auto;
 //   width: 20%;
 // }
+
+
+// //logout header try 1
+// <% if (currentUser) { %>
+//   <form action="/sessions?_method=DELETE" method="POST">
+//     <input type="submit" value="Log Out" />
+//   </form>
+// <% } else { %>
+//   <a href="/users/new">Create Account</a>
+//   <a href="/sessions/new">Login</a>
+// <% } %>
+
+
+// // // header links
+// <a href="/users/new">Create Account</a>
+// <a href="/sessions/new">Login</a>
