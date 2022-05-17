@@ -68,7 +68,8 @@ The seed information sources:
 
 
 
-  Auth:
-  https://www.topcoder.com/thrive/articles/authentication-and-authorization-in-express-js-api-using-jwt
-  ex 1: https://github.com/hunterwallen/1LINR
-  ex 2: 
+  Auth: The class markdowns and Casey helped me figure this part out
+
+  Helped me figure out google maps:
+  1: https://extension.umaine.edu/plugged-in/technology-marketing-communications/web/tips-for-web-managers/embed-map/
+  2: https://developers.google.com/maps/documentation/javascript/adding-a-google-map

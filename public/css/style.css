@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 500px) {
   * {
     font-family: 'EB Garamond', serif;
@@ -507,3 +494,31 @@
     max-width: 33%;
   }
 }
+
+  /* Map Page */
+  #maps-h1 {
+    text-align: center;
+  }
+
+  .maps-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .ocean {
+    background-color: #ebf5fb;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    margin: 3% 0;
+    border: solid grey thin;
+    border-radius: 2em;
+  }
+
+  .map {
+
+  }

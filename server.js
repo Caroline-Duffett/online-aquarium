@@ -13,6 +13,7 @@ const userController = require('./controllers/users_controller.js') //for Auth n
 const session = require('express-session')
 const sessionsController = require('./controllers/sessions_controller.js')
 const loginController = require('./controllers/login_controller.js')
+const mapController = require('./controllers/maps.js')
 
 
 //___________________
@@ -82,6 +83,7 @@ app.use('/aquarium', controller) //Crud Routes
 app.use('/users', userController) //For create account
 app.use('/sessions', sessionsController) //for sessions
 app.use('/', loginController) //For login
+app.use('/map', mapController) //For map
 
 
 //___________________
