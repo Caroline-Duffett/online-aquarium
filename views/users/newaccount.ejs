@@ -8,10 +8,12 @@
     <h1>Create Account</h1>
     <form class="new-account-form" action="/users" method="POST">
       <div class="row">
-        <h5>Username:</h5><input type="text" name="username" placeholder="Password" unique=true required/>
+        <h5>Username (must be atleast 4 characters):</h5><input type="text" name="username" placeholder="Username" minlength="4"
+        maxlength="15" unique=true required/>
       </div>
       <div class="row">
-        <h5>Password (must be atleast 8 characters):</h5><input type="password" name="password" placeholder="Password" minlength="8" required/>
+        <h5>Password (must be atleast 8 characters):</h5><input type="password" name="password" placeholder="Password" minlength="8"
+        maxlength="16" required/>
       </div>
 
       <input class='createAccount-submit' type="submit" value="Create Account"/>
