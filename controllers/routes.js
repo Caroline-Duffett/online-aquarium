@@ -4,6 +4,14 @@ const fishSeed = require('../models/seed.js') //seed data
 const Fish = require('../models/schema.js') //schema
 
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 //___________________
 // Routes (CRUD)
 //___________________
@@ -25,14 +33,18 @@ router.get('/seed', (req, res) => {
 
 //--- INDEX ROUTE
 router.get('/', (req, res) => {
-  Fish.find({}, (err, allFish) => {
-    res.render('index.ejs',
-      {
-        fishData: allFish,
-        //currentUser: req.session.currentUser,
-      }
-    )
-  })
+  if (req.session.currentUser) {
+    Fish.find({}, (err, allFish) => {
+      res.render('index.ejs',
+        {
+          fishData: allFish,
+          currentUser: req.session.currentUser,
+        }
+      )
+    })
+  } else {
+    res.redirect('"/sessions/new"')
+  }
 })
 
 

@@ -16,11 +16,15 @@ const session = require('express-session')
 const sessionsController = require('./controllers/sessions_controller.js')
 
 
+
+
 //___________________
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT
+
+
 
 
 //___________________
@@ -44,6 +48,8 @@ db.on('connected', () => console.log('mongo connected: ', MONGODB_URI))
 db.on('disconnected', () => console.log('mongo disconnected'))
 
 
+
+
 //___________________
 //For jQuery to work
 //___________________
@@ -53,6 +59,9 @@ const { window } = new JSDOM();
 const { document } = (new JSDOM('')).window;
 global.document = document;
 let $ = require("jquery")(window);
+
+
+
 
 //___________________
 //Middleware
@@ -67,8 +76,6 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 
 //use method override
 app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
-
-
 
 
 
@@ -98,6 +105,12 @@ app.use('/sessions', sessionsController) //for sessions
 //Listener
 //___________________
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+
+
+
+
+
+
 
 
 
