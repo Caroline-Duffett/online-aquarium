@@ -7,14 +7,14 @@
     <header>
       <%- include('./partials/header.ejs') %>
     </header>
-    <a id='create-button' href="/new"> <button type="button" name="button">Add New Animal +</button></a>
+    <a id='create-button' href="/aquarium/new"> <button type="button" name="button">Add New Animal +</button></a>
 
     <div class="index-flexbox">
       <% for (let i = 0; i < fishData.length; i++) { %>
 
         <div class="fish-wrapper">
 
-          <a href="/<%=fishData[i]._id%>">
+          <a href="/aquarium/<%=fishData[i]._id%>">
           <div class="fish-img-container">
             <img src="<%= fishData[i].img %>" alt="">
           </div>

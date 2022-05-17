@@ -14,14 +14,14 @@ const Fish = require('../models/schema.js') //schema
 // });
 
 //--- SEED ROUTE
-router.get('/seed', (req, res) => {
+router.get('/aquarium/seed', (req, res) => {
   Fish.create(fishSeed, (err, data) => {
-    res.redirect('/')
+    res.redirect('/aquarium')
   })
 })
 
 //--- INDEX ROUTE
-router.get('/', (req, res) => {
+router.get('/aquarium/', (req, res) => {
   Fish.find({}, (err, allFish) => {
     res.render('index.ejs',
       {
@@ -33,31 +33,31 @@ router.get('/', (req, res) => {
 
 
 //--- Create ROUTE
-router.post('/', (req, res) => {
+router.post('/aquarium', (req, res) => {
   if (req.body.img === '') {
     req.body.img = 'https://i.imgur.com/EXotp4G.png';
   }
   Fish.create(req.body, (err, createdFish) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, createdFish) => {
-      res.redirect('/')
+      res.redirect('/aquarium')
     })
   })
 })
 
 
 //--- NEW ROUTE
-router.get('/new', (req, res) => {
+router.get('/aquarium/new', (req, res) => {
   res.render('new.ejs')
 })
 
 //--- UPDATE ROUTE
-router.put('/:id', (req, res) => {
+router.put('/aquarium/:id', (req, res) => {
   if (req.body.img === '') {
     req.body.img = 'https://i.imgur.com/EXotp4G.png';
   }
   Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
-      res.redirect('/')
+      res.redirect('/aquarium')
     })
   })
 })
@@ -65,7 +65,7 @@ router.put('/:id', (req, res) => {
 
 
 //--- Edit ROUTE
-router.get('/:id/edit', (req, res) => {
+router.get('/aquarium/:id/edit', (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
     res.render('edit.ejs',
       {
@@ -76,14 +76,14 @@ router.get('/:id/edit', (req, res) => {
 })
 
 //--- DESTROY (DELETE) ROUTE
-router.delete('/:id', (req, res) => {
+router.delete('/aquarium/:id', (req, res) => {
   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
-    res.redirect('/')
+    res.redirect('/aquarium')
   })
 })
 
 //--- SHOW ROUTE
-router.get('/:id', (req, res) => {
+router.get('/aquarium/:id', (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
     res.render('show.ejs',
       {

@@ -10,7 +10,7 @@
     <div class='form-wrapper'>
       <h1>Edit: <%= fishData.name %> </h1>
 
-      <form class="fish-form" action="/<%=fishData._id%>?_method=PUT" method="POST">
+      <form class="fish-form" action="/aquarium/<%=fishData._id%>?_method=PUT" method="POST">
         <div class="form-row-normal">
           <h5>Name:</h5><input type="text" name="name" value="<%=fishData.name%>" required/>
         </div>

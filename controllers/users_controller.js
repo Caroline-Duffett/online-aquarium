@@ -7,8 +7,8 @@ const User = require('../models/users.js') //schema for username and password
 //Two Routes for user:
 
 //Brings user to signup page
-users.get('/newaccount', (req, res) => {
-  res.render('users/newaccount.ejs')
+users.get('/', (req, res) => {
+  res.render('../views/users/newaccount.ejs')
 })
 
 //Created new user
