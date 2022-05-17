@@ -9,7 +9,7 @@ const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
     return next()
   } else {
-    res.redirect('/sessions/new')
+    res.redirect('/')
   }
 }
 
@@ -24,7 +24,7 @@ const isAuthenticated = (req, res, next) => {
 // });
 
 //--- SEED ROUTE
-router.get('/seed', (req, res) => {
+router.get('/seed', isAuthenticated, (req, res) => {
   Fish.create(fishSeed, (err, data) => {
     res.redirect('/aquarium')
   })
@@ -32,7 +32,7 @@ router.get('/seed', (req, res) => {
 
 
 //--- INDEX ROUTE
-router.get('/', (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
   console.log(req.session);
   Fish.find({}, (err, allFish) => {
     res.render('index.ejs',
