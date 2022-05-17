@@ -9,8 +9,11 @@ const app = express ()
 const db = mongoose.connection
 require('dotenv').config()
 
-const userController = require('./controllers/users_controller.js') //for Auth
+const userController = require('./controllers/users_controller.js') //for Auth new account
 
+const session = require('express-session')
+
+const sessionsController = require('./controllers/sessions_controller.js')
 
 
 //___________________
@@ -68,14 +71,7 @@ app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 
 
 
-//For Auth
-// app.use(
-//   session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// )
+
 
 //___________________
 //Routes
@@ -83,6 +79,17 @@ app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 app.use('/aquarium', controller) //Crud Routes
 
 app.use('/', userController) //For create account
+
+//For Auth
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
+
+app.use('/sessions', sessionsController) //for sessions
 
 
 

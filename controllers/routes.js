@@ -16,7 +16,10 @@ const Fish = require('../models/schema.js') //schema
 //--- SEED ROUTE
 router.get('/seed', (req, res) => {
   Fish.create(fishSeed, (err, data) => {
-    res.redirect('/aquarium')
+    res.redirect('/aquarium',
+    {
+      currentUser: req.session.currentUser,
+    })
   })
 })
 
@@ -26,6 +29,7 @@ router.get('/', (req, res) => {
     res.render('index.ejs',
       {
         fishData: allFish,
+        currentUser: req.session.currentUser,
       }
     )
   })
@@ -39,7 +43,10 @@ router.post('/', (req, res) => {
   }
   Fish.create(req.body, (err, createdFish) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, createdFish) => {
-      res.redirect('/aquarium')
+      res.redirect('/aquarium',
+      {
+        currentUser: req.session.currentUser,
+      })
     })
   })
 })
@@ -47,7 +54,10 @@ router.post('/', (req, res) => {
 
 //--- NEW ROUTE
 router.get('/new', (req, res) => {
-  res.render('new.ejs')
+  res.render('new.ejs',
+  {
+    currentUser: req.session.currentUser,
+  })
 })
 
 //--- UPDATE ROUTE
@@ -57,7 +67,10 @@ router.put('/:id', (req, res) => {
   }
   Fish.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, updatedFish) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
-      res.redirect('/aquarium')
+      res.redirect('/aquarium',
+      {
+        currentUser: req.session.currentUser,
+      })
     })
   })
 })
@@ -70,6 +83,7 @@ router.get('/:id/edit', (req, res) => {
     res.render('edit.ejs',
       {
         fishData: foundFish,
+        currentUser: req.session.currentUser,
       }
     )
   })
@@ -78,7 +92,10 @@ router.get('/:id/edit', (req, res) => {
 //--- DESTROY (DELETE) ROUTE
 router.delete('/:id', (req, res) => {
   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
-    res.redirect('/aquarium')
+    res.redirect('/aquarium',
+    {
+      currentUser: req.session.currentUser,
+    })
   })
 })
 
@@ -88,6 +105,7 @@ router.get('/:id', (req, res) => {
     res.render('show.ejs',
       {
         fishData: foundFish,
+        currentUser: req.session.currentUser,
       }
     )
   })
