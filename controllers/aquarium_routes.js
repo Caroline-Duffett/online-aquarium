@@ -35,7 +35,7 @@ router.get('/seed', isAuthenticated, (req, res) => {
 router.get('/', isAuthenticated, (req, res) => {
   console.log(req.session);
   Fish.find({}, (err, allFish) => {
-    res.render('index.ejs',
+    res.render('aquarium/index.ejs',
       {
         fishData: allFish,
         currentUser: req.session,
@@ -60,7 +60,7 @@ router.post('/', isAuthenticated, (req, res) => {
 
 //--- NEW ROUTE
 router.get('/new', isAuthenticated, (req, res) => {
-  res.render('new.ejs',
+  res.render('aquarium/new.ejs',
   {
     currentUser: req.session,
   })
@@ -83,7 +83,7 @@ router.put('/:id', isAuthenticated, (req, res) => {
 //--- Edit ROUTE
 router.get('/:id/edit', isAuthenticated, (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
-    res.render('edit.ejs',
+    res.render('aquarium/edit.ejs',
       {
         fishData: foundFish,
         currentUser: req.session,
@@ -102,7 +102,7 @@ router.delete('/:id', isAuthenticated, (req, res) => {
 //--- SHOW ROUTE
 router.get('/:id', isAuthenticated, (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
-    res.render('show.ejs',
+    res.render('aquarium/show.ejs',
       {
         fishData: foundFish,
         currentUser: req.session,
