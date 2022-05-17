@@ -18,7 +18,7 @@ router.get('/seed', (req, res) => {
   Fish.create(fishSeed, (err, data) => {
     res.redirect('/aquarium',
     {
-      currentUser: req.session.currentUser,
+      //currentUser: req.session.currentUser,
     })
   })
 })
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
     res.render('index.ejs',
       {
         fishData: allFish,
-        currentUser: req.session.currentUser,
+        //currentUser: req.session.currentUser,
       }
     )
   })
@@ -45,7 +45,7 @@ router.post('/', (req, res) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(",")}, {new: true}, (err, createdFish) => {
       res.redirect('/aquarium',
       {
-        currentUser: req.session.currentUser,
+        //currentUser: req.session.currentUser,
       })
     })
   })
@@ -56,7 +56,7 @@ router.post('/', (req, res) => {
 router.get('/new', (req, res) => {
   res.render('new.ejs',
   {
-    currentUser: req.session.currentUser,
+    //currentUser: req.session.currentUser,
   })
 })
 
@@ -69,7 +69,7 @@ router.put('/:id', (req, res) => {
     Fish.findByIdAndUpdate({_id: req.params.id}, {diet: req.body.diet.split(',')}, {new: true}, (err, updatedDish) => {
       res.redirect('/aquarium',
       {
-        currentUser: req.session.currentUser,
+        //currentUser: req.session.currentUser,
       })
     })
   })
@@ -83,7 +83,7 @@ router.get('/:id/edit', (req, res) => {
     res.render('edit.ejs',
       {
         fishData: foundFish,
-        currentUser: req.session.currentUser,
+        //currentUser: req.session.currentUser,
       }
     )
   })
@@ -94,7 +94,7 @@ router.delete('/:id', (req, res) => {
   Fish.deleteOne({_id: req.params.id}, (err, deletedFish) => {
     res.redirect('/aquarium',
     {
-      currentUser: req.session.currentUser,
+      //currentUser: req.session.currentUser,
     })
   })
 })
@@ -105,7 +105,7 @@ router.get('/:id', (req, res) => {
     res.render('show.ejs',
       {
         fishData: foundFish,
-        currentUser: req.session.currentUser,
+        //currentUser: req.session.currentUser,
       }
     )
   })

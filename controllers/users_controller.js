@@ -7,7 +7,7 @@ const User = require('../models/users.js') //schema for username and password
 //Two Routes for user:
 
 //Brings user to signup page
-users.get('/', (req, res) => {
+users.get('/new', (req, res) => {
   res.render('../views/users/newaccount.ejs')
 })
 
@@ -18,7 +18,7 @@ users.post('/', (req, res) => {
   User.create(req.body, (err, createdUser) => {
     //res.send(createdUser)
     console.log('user is created', createdUser)
-    res.redirect('/')
+    res.redirect('/aquarium')
   })
 })
 

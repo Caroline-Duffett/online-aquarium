@@ -78,7 +78,7 @@ app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 //___________________
 app.use('/aquarium', controller) //Crud Routes
 
-app.use('/', userController) //For create account
+app.use('/users', userController) //For create account
 
 //For Auth
 app.use(
