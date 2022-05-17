@@ -80,7 +80,7 @@ app.use('/users', userController) //For Auth
 //___________________
 //Routes
 //___________________
-app.use('/', controller) //Crud Routes
+app.use('/aquarium', controller) //Crud Routes
 
 
 
