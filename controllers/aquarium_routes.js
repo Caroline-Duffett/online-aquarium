@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
-const fishSeed = require('../models/seed.js') //seed data
-const Fish = require('../models/schema.js') //schema
+const fishSeed = require('../models/aquarium_seed.js') //seed data
+const Fish = require('../models/aquarium_schema.js') //schema
 
 
 //Middleware

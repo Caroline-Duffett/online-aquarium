@@ -3,12 +3,12 @@
 //___________________
 const express = require('express')
 const methodOverride  = require('method-override')
-const controller = require('./controllers/routes.js'); //not in original version
 const mongoose = require ('mongoose')
 const app = express ()
 const db = mongoose.connection
 require('dotenv').config()
 
+const aquariumController = require('./controllers/aquarium_routes.js')
 const userController = require('./controllers/users_controller.js') //for Auth new account
 const session = require('express-session')
 const sessionsController = require('./controllers/sessions_controller.js')
@@ -79,7 +79,7 @@ app.use(
 //___________________
 //Controllers
 //___________________
-app.use('/aquarium', controller) //Crud Routes
+app.use('/aquarium', aquariumController ) //Crud Routes
 app.use('/users', userController) //For create account
 app.use('/sessions', sessionsController) //for sessions
 app.use('/', loginController) //For login
