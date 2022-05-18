@@ -57,3 +57,87 @@ body {
   border: solid grey thin;
   border-radius: 2em;
 }
+
+#create-animal-btn button {
+  position: fixed;
+  margin: 0;
+}
+
+#create-animal-btn-container {
+  padding: 0;
+}
+
+/*Animal Show Page*/
+#animal-card {
+  background-color: #ebf5fb;
+  border: solid grey thin;
+  border-radius: 2em;
+  margin-top: 10%;
+  text-align: center;
+}
+
+#animal-show-header {
+  margin-top: 2%;
+}
+
+#animal-show-text {
+  text-align: left;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-pic-img img {
+  height: 100%;
+  width: 150px;
+}
+
+#edit-btn {
+  border: solid grey thin;
+}
+
+#animal-delete-btn {
+  border: solid grey thin;
+}
+
+
+
+.hamburger-lines {
+  /*padding: 12px;*/
+  margin: 50%;
+  display: flex;
+  height: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.hamburger-lines:hover {
+  background-color: lightgrey;
+}
+
+.line {
+  height: 4px;
+  width: 30px;
+  border-radius: 10px;
+  background: grey;
+}
+
+.drop-menu {
+  margin:0;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
+}
+
+.menu-div {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}

@@ -7,22 +7,58 @@
     <header>
       <%- include('../partials/animal_header.ejs') %>
     </header>
-    <div class="container">
-      <h1>Animal Show Page</h1>
+    <div id="animal-card" class="container">
+      <h1 id="animal-show-header">This is <%= animalData.animalName %></h1>
+      <div class="profile-pic-img">
+          <img src="<%= animalData.animalImg%>" alt="">
+      </div>
 
-      <div class="info">
-        <h2>Meet <%= animalData.animalName %> </h2>
+      <div id="animal-show-text" class="container">
         <h4>Age: <%= animalData.age%> </h4>
         <h4>Species: <%= animalData.species%> </h4>
       </div>
 
-      <div class="btns">
-        <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" type="button" name="button">Edit</button></a>
-        <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
-          <input id="delete-btn" type="submit" value="Delete">
-        </form>
+
+      <div class="menu-div">
+        <div class="hamburger-lines-div">
+          <div id='open' class="hamburger-lines">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+          <div id='close' class="hamburger-lines">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div id="drop" class="drop-menu">
+          <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" class="btn btn-light" type="button" name="button">Edit</button></a>
+          <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
+            <button id=animal-delete-btn class="btn btn-light" type="submit" name="button">Delete</button>
+          </form>
+        </div>
       </div>
     </div>
-
   </body>
 </html>
+
+<script>
+  $(() => {
+
+    $('#close').hide()
+    $('.drop-menu').hide()
+
+    $('#open').click( () => {
+      $('#open').hide()
+      $('#close').show()
+      $('.drop-menu').show()
+    })
+
+    $('#close').click( () => {
+      $('#close').hide()
+      $('#open').show()
+      $('.drop-menu').hide()
+    })
+  });
+</script>

@@ -355,6 +355,11 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // </nav>
 
 
+// //orginal animal devete form
+// <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
+//   <input id="delete-btn" type="submit" value="Delete">
+// </form>
+
 // //original logout form
 // <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
 //   <input id="logout-form" type="submit" value="Log Out"/>
@@ -380,4 +385,12 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //       </a>
 //     </div>
 //   <% } %>
+// </div>
+
+// //original animal show page btns 
+// <div class="show-page-btns">
+//   <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" class="btn btn-light" type="button" name="button">Edit</button></a>
+//   <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
+//     <button id=animal-delete-btn class="btn btn-light" type="submit" name="button">Delete</button>
+//   </form>
 // </div>
