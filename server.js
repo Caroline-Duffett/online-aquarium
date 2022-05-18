@@ -353,3 +353,9 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     </form>
 //   </div>
 // </nav>
+
+
+// //original logout form
+// <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+//   <input id="logout-form" type="submit" value="Log Out"/>
+// </form>

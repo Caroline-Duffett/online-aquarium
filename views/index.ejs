@@ -7,21 +7,22 @@
       <nav class="navbar sticky-top" style="background-color: #ebf5fb;">
         <div class="container-fluid">
           <p class="navbar-text">Welcome <%=currentUser.currentUser.username%> </p>
+
           <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
-            <input id="logout-form" type="submit" value="Log Out"/>
+            <button id="logout-btn" class="btn btn-light" type="submit" name="button">Log out</button>
           </form>
         </div>
       </nav>
 
-
-    <div class="container" style="background-color: blue;">
-      <h1>Welcome to the Online Aquarium!</h1>
-
-      <div class="container-fluid">
-        <a href="/animal"><button type="button" name="/aquarium">See our Animals</button></a>
-        <a href="/aquarium"><button type="button" name="button">Species at Aquarium</button></a>
+      <div id="home-page-container" class="container"  style="min-width: 400px;">
+        <h1>Welcome to the Online Aquarium!</h1>
+        <div id="home-page-button-div" class="container-fluid">
+          <a href="/animal"><button type="button" class="btn btn-secondary" name="/aquarium">See our Animals</button></a>
+          <a href="/aquarium"><button type="button" class="btn btn-secondary" name="button">Species at Aquarium</button></a>
+        </div>
       </div>
-    </div>
+
+
 
 
   </body>
