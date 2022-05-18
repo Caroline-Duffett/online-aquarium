@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Index Page</title>
+    <%- include('./partials/animal_head.ejs') %>
   </head>
   <body>
-    <h1>New Index (home) Page For Both Models</h1>
+    <header>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <p id="welcome-message" >Welcome <%=currentUser.currentUser.username%> </p>
+        </li>
+        <li class="nav-item">
+          <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+            <input id="logout-form" type="submit" value="Log Out" />
+          </form>
+        </li>
+      </ul>
+    </header>
+    <div class="container">
+      <h1>Welcome to the Online Aquarium!</h1>
 
-    <div class="index-btns">
-      <a href="/animal"><button type="button" name="/aquarium">Animals</button></a>
-      <a href="/aquarium"><button type="button" name="button">Aquarium</button></a>
+      <div class="container-fluid">
+        <a href="/animal"><button type="button" name="/aquarium">See our Animals</button></a>
+        <a href="/aquarium"><button type="button" name="button">Species at Aquarium</button></a>
+      </div>
     </div>
+
+
   </body>
 </html>

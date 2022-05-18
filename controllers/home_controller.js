@@ -13,7 +13,10 @@ const isAuthenticated = (req, res, next) => {
 
 
 home.get('/', isAuthenticated, (req, res) => {
-  res.render('../views/index.ejs')
+  res.render('../views/index.ejs',
+  {
+        currentUser: req.session
+  })
 })
 
 module.exports = home

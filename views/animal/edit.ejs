@@ -8,25 +8,27 @@
       <%- include('../partials/animal_header.ejs') %>
     </header>
 
-    <div class='form-Div'>
+    <div class='container'>
       <h1>Edit <%= animalData.name %> </h1>
 
-      <form class="animal-form" action="/animal/<%=animalData._id%>?_method=PUT" method="POST">
-        <div class="form-row">
+      <form action="/animal/<%=animalData._id%>?_method=PUT" method="POST">
+        <div class="form-group col-md-4">
           <label for="animalName">Name: </label>
           <input type="text" name="animalName" value="<%=animalData.animalName%>" required/>
         </div>
-        <div class="form-row">
+        <div class="form-group col-md-4">
           <label for="age">Age: </label>
           <input type="text" name="age" value="<%=animalData.age%>" required/>
         </div>
-        <div class="form-row">
+        <div class="form-group col-md-4">
           <label for="species">Species: </label>
           <input type="text" name="species" value="<%=animalData.species%>" required/>
         </div>
-        <input class='form-button' type="submit" value="Create Animal"/>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
+
+
 
   </body>
 </html>

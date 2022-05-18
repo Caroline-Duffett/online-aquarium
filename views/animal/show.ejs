@@ -7,20 +7,21 @@
     <header>
       <%- include('../partials/animal_header.ejs') %>
     </header>
+    <div class="container">
+      <h1>Animal Show Page</h1>
 
-    <h1>Animal Show Page</h1>
+      <div class="info">
+        <h2>Meet <%= animalData.animalName %> </h2>
+        <h4>Age: <%= animalData.age%> </h4>
+        <h4>Species: <%= animalData.species%> </h4>
+      </div>
 
-    <div class="info">
-      <h2>Meet <%= animalData.animalName %> </h2>
-      <h4>Age: <%= animalData.age%> </h4>
-      <h4>Species: <%= animalData.species%> </h4>
-    </div>
-
-    <div class="btns">
-      <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" type="button" name="button">Edit</button></a>
-      <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
-        <input id="delete-btn" type="submit" value="Delete">
-      </form>
+      <div class="btns">
+        <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" type="button" name="button">Edit</button></a>
+        <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
+          <input id="delete-btn" type="submit" value="Delete">
+        </form>
+      </div>
     </div>
 
   </body>
