@@ -14,10 +14,11 @@ const isAuthenticated = (req, res, next) => {
 }
 
 
-//=========== For 2 Model ============ //
+//___________________
+// For Fish (info)
+//___________________
 const fishSeed = require('../models/aquarium_seed.js') //seed data
 const Fish = require('../models/aquarium_schema.js') //schema
-//==================================== //
 
 
 //___________________
