@@ -19,20 +19,9 @@
       </div>
 
 
-      <div class="menu-div">
-        <div class="hamburger-lines-div">
-          <div id='open' class="hamburger-lines">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-          <div id='close' class="hamburger-lines">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-        </div>
-        <div id="drop" class="drop-menu">
+
+      <div class="show-page-btns">
+        <div class="btns-div">
           <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" class="btn btn-light" type="button" name="button">Edit</button></a>
           <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
             <button id=animal-delete-btn class="btn btn-light" type="submit" name="button">Delete</button>
@@ -40,25 +29,6 @@
         </div>
       </div>
     </div>
+
   </body>
 </html>
-
-<script>
-  $(() => {
-
-    $('#close').hide()
-    $('.drop-menu').hide()
-
-    $('#open').click( () => {
-      $('#open').hide()
-      $('#close').show()
-      $('.drop-menu').show()
-    })
-
-    $('#close').click( () => {
-      $('#close').hide()
-      $('#open').show()
-      $('.drop-menu').hide()
-    })
-  });
-</script>

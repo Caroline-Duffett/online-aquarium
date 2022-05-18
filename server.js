@@ -387,7 +387,7 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //   <% } %>
 // </div>
 
-// //original animal show page btns 
+// //original animal show page btns
 // <div class="show-page-btns">
 //   <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" class="btn btn-light" type="button" name="button">Edit</button></a>
 //   <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
