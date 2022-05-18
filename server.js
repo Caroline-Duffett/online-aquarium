@@ -88,7 +88,7 @@ app.use('/sessions', sessionsController) //for sessions
 app.use('/', loginController) //For login
 app.use('/map', mapController) //For map
 app.use('/animal', animalController) //Animal Crud Routes
-app.use('/home', homeController) //For home 
+app.use('/home', homeController) //For home
 
 
 //___________________
@@ -303,3 +303,21 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // // // header links
 // <a href="/users/new">Create Account</a>
 // <a href="/sessions/new">Login</a>
+
+
+//original create new animal form:
+// <form class="animal-form" action="/animal" method="POST">
+//   <div class="form-row">
+//     <label for="animalname">Name: </label>
+//     <input type="text" name="animalname" required/>
+//   </div>
+//   <div class="form-row">
+//     <label for="animalage">Age: </label>
+//     <input type="text" name="animalage" required/>
+//   </div>
+//   <div class="form-row">
+//     <label for="species">Species: </label>
+//     <input type="text" name="species" required/>
+//   </div>
+//   <input class='animal-form-button' type="submit" value="Create Animal"/>
+// </form>

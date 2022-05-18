@@ -7,12 +7,12 @@
     <header>
       <%- include('../partials/aquarium_header.ejs') %>
     </header>
-    <a id='create-button' href="/aquarium/new"> <button type="button" name="button">Add New Animal +</button></a>
+    <a id='create-button' href="/aquarium/new"> <button type="button" name="button">Add New Species +</button></a>
 
 
 
     <div class="index-flexbox">
-      <h1 id="aquarium-index-header">Our Animals</h1>
+      <h1 id="aquarium-index-header">Species at the Aquarium</h1>
       <% for (let i = 0; i < fishData.length; i++) { %>
 
         <div class="fish-wrapper">

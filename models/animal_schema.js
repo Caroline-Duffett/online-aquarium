@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 
 const animalSchema = new Schema (
   {
-    name: {type: String, required: true},
+    animalName: {type: String, required: true},
     age: {type: String, required: true},
-    species: {type: String, required: true},
+    species: {type: String, required: true}
   }
 )
 
