@@ -394,3 +394,7 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     <button id=animal-delete-btn class="btn btn-light" type="submit" name="button">Delete</button>
 //   </form>
 // </div>
+
+
+// // //original animal new submit button:
+// <input class='animal-form-button' type="submit" value="Create Animal"/>

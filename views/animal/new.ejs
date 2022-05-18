@@ -8,27 +8,28 @@
       <%- include('../partials/animal_header.ejs') %>
     </header>
 
-    <div class='animal-form-Div'>
+    <div class='animal-form-wrapper'>
       <h1>Create New Animal</h1>
       <form class="animal-form" action="/animal" method="POST">
-        <div class="form-row">
+        <div class="listen">
           <label for="animalName">Name: </label>
           <input type="text" name="animalName" required/>
         </div>
-        <div class="form-row">
+        <div class="listen">
           <label for="age">Age: </label>
           <input type="text" name="age" required/>
         </div>
-        <div class="form-row">
+        <div class="listen">
           <label for="species">Species: </label>
           <input type="text" name="species" required/>
         </div>
-        <div class="form-row">
+        <div class="listen">
           <label for="animalImg">Image: </label>
           <input type="url" name="animalImg"/>
         </div>
 
-        <input class='animal-form-button' type="submit" value="Create Animal"/>
+        <button id="animal-form-btn" type="submit" class="btn btn-primary">Submit</button>
+
       </form>
 
     </div>
