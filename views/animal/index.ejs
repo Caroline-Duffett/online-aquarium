@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/animal_head.ejs') %>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/animal_header.ejs') %>
+    </header>
+    <a href="/animal/new"><button type="button" name="button">Create New Animal</button></a>
+
+    <h1>Animal Index Page</h1>
+
+    <% for (let i = 0; i < animalData.length; i++) { %>
+      <div class="animal-wrapper">
+        <a href="/animal/<%=animalData[i]._id%>">
+        <div class="animal-name-species-div">
+          <h3 id='animal-name'><%= animalData[i].name %></h3>
+          <h3 id='animal-species'><%= animalData[i].species %></h3>
+        </div>
+        </a>
+      </div>
+    <% } %>
+
+  </body>
+</html>

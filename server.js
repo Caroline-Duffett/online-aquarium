@@ -8,12 +8,14 @@ const app = express ()
 const db = mongoose.connection
 require('dotenv').config()
 
+const session = require('express-session')
+
 const aquariumController = require('./controllers/aquarium_routes.js')
 const userController = require('./controllers/users_controller.js') //for Auth new account
-const session = require('express-session')
 const sessionsController = require('./controllers/sessions_controller.js')
 const loginController = require('./controllers/login_controller.js')
 const mapController = require('./controllers/maps.js')
+const animalController = require('./controllers/animal_routes.js')
 
 
 //___________________
@@ -79,11 +81,12 @@ app.use(
 //___________________
 //Controllers
 //___________________
-app.use('/aquarium', aquariumController ) //Crud Routes
+app.use('/aquarium', aquariumController ) //Aquarium Crud Routes
 app.use('/users', userController) //For create account
 app.use('/sessions', sessionsController) //for sessions
 app.use('/', loginController) //For login
 app.use('/map', mapController) //For map
+app.use('/animal', animalController) //Animal Crud Routes
 
 
 //___________________

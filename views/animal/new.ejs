@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/animal_head.ejs') %>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/animal_header.ejs') %>
+    </header>
+
+    <div class='form-Div'>
+      <h1>Create New Animal</h1>
+
+      <form class="animal-form" action="/animal" method="POST">
+        <div class="form-row">
+          <label for="animalname">Name: </label>
+          <input type="text" name="animalname" required/>
+        </div>
+        <div class="form-row">
+          <label for="animalage">Age: </label>
+          <input type="text" name="animalage" required/>
+        </div>
+        <div class="form-row">
+          <label for="species">Species: </label>
+          <input type="text" name="species" required/>
+        </div>
+        <input class='form-button' type="submit" value="Create Animal"/>
+      </form>
+    </div>
+  </body>
+</html>

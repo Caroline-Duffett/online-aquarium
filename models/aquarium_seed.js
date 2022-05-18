@@ -17,7 +17,7 @@ module.exports = [
     animalType: 'Invertebrates',
     range: 'Pacific Ocean',
     img: 'https://i.imgur.com/y5y0E8G.png',
-    number: 2,
+    number: 1,
     diet: ['clams', 'shrimp', 'crabs', 'snails', 'other octopuses', 'fish'],
     size: '45-65 pounds'
   },
@@ -28,7 +28,7 @@ module.exports = [
     animalType: 'Fish, shark',
     range: 'In tropical and subtropical waters around the world',
     img: 'https://i.imgur.com/94Ib3vl.png',
-    number: 1,
+    number: 2,
     diet: ['stringrays', 'crustaceans', 'fish', 'squid'],
     size: 'Can reach 14 feet'
   },
@@ -39,7 +39,7 @@ module.exports = [
     animalType: 'Reptile',
     range: 'In tropical and subtropical waters around the world. ',
     img: 'https://i.imgur.com/HP04VSz.png',
-    number: 3,
+    number: 4,
     diet: ['macroalgae', 'sea grass'],
     size: '3-4 feet'
   },
@@ -50,7 +50,7 @@ module.exports = [
     animalType: 'Invertebrate',
     range: 'In the Nothern Pacific Ocean and Articl Ocean',
     img: 'https://i.imgur.com/34pLtta.png',
-    number: 1,
+    number: 3,
     diet: ['zooplankton', 'moon jellies', 'small fish', 'small crustaceans'],
     size: '1 1/2 - 8 feet in diameter. Their tenticals can grow to be more than 100 feet.'
   },
@@ -61,7 +61,7 @@ module.exports = [
     animalType: 'Fish',
     range: 'Atlantic Ocean',
     img: 'https://i.imgur.com/JgKaAna.png',
-    number: 15,
+    number: 5,
     diet: ['shrimp larvae', 'worms', 'copepods', 'small snails', 'amphipods'],
     size: '2-4 inches'
   },
@@ -72,7 +72,7 @@ module.exports = [
     animalType: 'Fish',
     range: 'Indian Ocean & Pacific Ocean',
     img: 'https://i.imgur.com/sHMAIZy.png',
-    number: 10,
+    number: 4,
     diet: ['algae', 'worms', 'small crustaceans', 'zooplankton'],
     size: 'About 3 inches'
   },
@@ -83,7 +83,7 @@ module.exports = [
     animalType: 'Fish',
     range: 'Atlantic Ocean & Pacific Ocean',
     img: 'https://i.imgur.com/lNXQriB.png',
-    number: 3,
+    number: 2,
     diet: ['sea urchins', 'snails', 'clams', 'gastropods'],
     size: 'Can grow to be 3 feet'
   },

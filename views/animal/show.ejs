@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/animal_head.ejs') %>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/animal_header.ejs') %>
+    </header>
+
+    <h1>Animal Show Page</h1>
+    <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" type="button" name="button">Edit</button></a>
+    <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
+      <input id="delete-btn" type="submit" value="Delete">
+    </form>
+
+  </body>
+</html>
