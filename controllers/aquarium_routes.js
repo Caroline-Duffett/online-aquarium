@@ -60,10 +60,13 @@ router.post('/', isAuthenticated, (req, res) => {
 
 //--- NEW ROUTE
 router.get('/new', isAuthenticated, (req, res) => {
-  res.render('aquarium/new.ejs',
-  {
-    currentUser: req.session,
-  })
+  Fish.find({}, (err, allSpecies) => { //added for 2 models
+    res.render('aquarium/new.ejs',
+    {
+      currentUser: req.session,
+      species: allSpecies //added for 2 models
+    })
+  }) //added for 2 models
 })
 
 //--- UPDATE ROUTE

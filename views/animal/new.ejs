@@ -21,7 +21,11 @@
         </div>
         <div class="listen">
           <label for="species">Species: </label>
-          <input type="text" name="species" required/>
+          <select name="species" required>
+            <% for (let j = 0; j < species.length; j++ ) { %>
+              <option value="<%=species[j].name%>"><%=species[j].name%></option>
+            <% } %>
+          </select></br>
         </div>
         <div class="listen">
           <label for="animalImg">Image: </label>
@@ -29,9 +33,7 @@
         </div>
 
         <button id="animal-form-btn" type="submit" class="btn btn-primary">Submit</button>
-
       </form>
-
     </div>
   </body>
 </html>

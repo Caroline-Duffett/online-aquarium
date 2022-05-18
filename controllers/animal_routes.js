@@ -14,6 +14,12 @@ const isAuthenticated = (req, res, next) => {
 }
 
 
+//=========== For 2 Model ============ //
+const fishSeed = require('../models/aquarium_seed.js') //seed data
+const Fish = require('../models/aquarium_schema.js') //schema
+//==================================== //
+
+
 //___________________
 // Routes (CRUD)
 //___________________
@@ -55,10 +61,13 @@ animals.post('/', isAuthenticated, (req, res) => {
 
 //--- NEW ROUTE
 animals.get('/new', isAuthenticated, (req, res) => {
-  res.render('animal/new.ejs',
-  {
-    currentUser: req.session,
-  })
+  Fish.find({}, (err, allSpecies) => { //added for 2 models
+    res.render('animal/new.ejs',
+    {
+      currentUser: req.session,
+      species: allSpecies //added for 2 models
+    })
+  }) //added for 2 models
 })
 
 //--- UPDATE ROUTE
@@ -73,14 +82,21 @@ animals.put('/:id', isAuthenticated, (req, res) => {
 //--- Edit ROUTE
 animals.get('/:id/edit', isAuthenticated, (req, res) => {
   Animal.findById(req.params.id, (err, foundAnimal) => {
-    res.render('animal/edit.ejs',
-      {
-        animalData: foundAnimal,
-        currentUser: req.session,
-      }
-    )
+    Fish.find({}, (err, allSpecies) => { //added for 2 models
+      res.render('animal/edit.ejs',
+        {
+          animalData: foundAnimal,
+          currentUser: req.session,
+          species: allSpecies //added for 2 models
+        }
+      )
+    }) //added for 2 models
   })
 })
+
+
+
+
 
 //--- DESTROY (DELETE) ROUTE
 animals.delete('/:id', isAuthenticated, (req, res) => {

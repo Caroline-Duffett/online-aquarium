@@ -22,7 +22,11 @@
         </div>
         <div class="listen">
           <label for="species">Species: </label>
-          <input type="text" name="species" value="<%=animalData.species%>" required/>
+          <select name="species" required>
+            <% for (let j = 0; j < species.length; j++ ) { %>
+              <option value="<%=species[j].name%>"><%=species[j].name%></option>
+            <% } %>
+          </select></br>
         </div>
         <div class="listen">
           <label for="animalImg">Image: </label>

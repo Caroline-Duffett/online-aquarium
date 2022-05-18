@@ -100,13 +100,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 
 
 
-
-
-
-
-
-
-
 //---------- Graveyard ----------//
 //kinda working post route:
 // app.post('/', (req, res) => {
@@ -398,3 +391,16 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 
 // // //original animal new submit button:
 // <input class='animal-form-button' type="submit" value="Create Animal"/>
+
+
+// //original edit route:
+// animals.get('/:id/edit', isAuthenticated, (req, res) => {
+//   Animal.findById(req.params.id, (err, foundAnimal) => {
+//     res.render('animal/edit.ejs',
+//       {
+//         animalData: foundAnimal,
+//         currentUser: req.session,
+//       }
+//     )
+//   })
+// })
