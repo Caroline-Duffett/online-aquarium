@@ -16,6 +16,7 @@ const sessionsController = require('./controllers/sessions_controller.js')
 const loginController = require('./controllers/login_controller.js')
 const mapController = require('./controllers/maps.js')
 const animalController = require('./controllers/animal_routes.js')
+const homeController = require('./controllers/home_controller.js')
 
 
 //___________________
@@ -87,6 +88,7 @@ app.use('/sessions', sessionsController) //for sessions
 app.use('/', loginController) //For login
 app.use('/map', mapController) //For map
 app.use('/animal', animalController) //Animal Crud Routes
+app.use('/home', homeController) //For home 
 
 
 //___________________
