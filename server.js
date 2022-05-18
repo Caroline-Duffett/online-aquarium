@@ -325,3 +325,31 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 
 //original animal edit form submit button:
 //<input type="submit" value="Create Animal"/>
+
+
+
+// //homepage header try 1:
+// <header>
+//   <ul class="nav justify-content-end">
+//     <li class="nav-item">
+//       <p id="welcome-message" >Welcome <%=currentUser.currentUser.username%> </p>
+//     </li>
+//     <li class="nav-item">
+//       <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+//         <input id="logout-form" type="submit" value="Log Out" />
+//       </form>
+//     </li>
+//   </ul>
+// </header>
+
+// //homepage header try 2:
+// <nav class="navbar fixed-top bg-dark">
+//   <div class="container-fluid">
+//     <p>Welcome <%=currentUser.currentUser.username%> </p>
+//   </div>
+//   <div class="container-fluid">
+//     <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+//       <input id="logout-form" type="submit" value="Log Out" />
+//     </form>
+//   </div>
+// </nav>

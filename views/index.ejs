@@ -4,19 +4,17 @@
     <%- include('./partials/animal_head.ejs') %>
   </head>
   <body>
-    <header>
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <p id="welcome-message" >Welcome <%=currentUser.currentUser.username%> </p>
-        </li>
-        <li class="nav-item">
+      <nav class="navbar sticky-top" style="background-color: #ebf5fb;">
+        <div class="container-fluid">
+          <p class="navbar-text">Welcome <%=currentUser.currentUser.username%> </p>
           <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
-            <input id="logout-form" type="submit" value="Log Out" />
+            <input id="logout-form" type="submit" value="Log Out"/>
           </form>
-        </li>
-      </ul>
-    </header>
-    <div class="container">
+        </div>
+      </nav>
+
+
+    <div class="container" style="background-color: blue;">
       <h1>Welcome to the Online Aquarium!</h1>
 
       <div class="container-fluid">

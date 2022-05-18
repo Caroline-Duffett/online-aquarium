@@ -73,3 +73,6 @@ The seed information sources:
   Helped me figure out google maps:
   1: https://extension.umaine.edu/plugged-in/technology-marketing-communications/web/tips-for-web-managers/embed-map/
   2: https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+
+  Helped me Figure out bootstrap:
+  https://getbootstrap.com/docs/5.2/getting-started/introduction/

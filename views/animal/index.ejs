@@ -18,7 +18,7 @@
       <h1>Animal Index Page</h1>
 
       <% for (let i = 0; i < animalData.length; i++) { %>
-        <div class="container-sm">
+        <div class="container" style="background-color: green;">
           <a href="/animal/<%=animalData[i]._id%>">
           <div class="animal-name-species-div">
             <h3 id='animal-name'><%= animalData[i].name %></h3>
