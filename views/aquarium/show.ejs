@@ -49,6 +49,9 @@
               <ul class="animal-list">
                 <% for (let l = 0; l < animalData.length; l++) { %>
                   <li><%= animalData[l].animalName %></li>
+                  <% if ( <%= fishData.name %> === <%= animalData[l].species %> ) { %>
+                    <li><%= animalData[l].animalName %></li>
+                  <% } %>
                 <% } %>
               </ul>
             </div>
