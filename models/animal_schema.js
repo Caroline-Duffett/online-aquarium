@@ -5,7 +5,8 @@ const animalSchema = new Schema (
   {
     animalName: {type: String, required: true},
     age: {type: String, required: true},
-    species: {type: String, required: true}
+    species: {type: String, required: true},
+    animalImg: String
   }
 )
 

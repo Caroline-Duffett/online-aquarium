@@ -67,6 +67,30 @@ The seed information sources:
   Old photo URL: https://i.imgur.com/hTO0BjZ.png
 
 
+  Profile images:
+  Dolphin: https://www.flickr.com/photos/nationalaquarium/5965129472
+    URL: https://i.imgur.com/U9LiyPK.png
+  Octopus: https://depts.washington.edu/advis104/2020/06/09/call-to-coast-salish-artists-seattle-aquariums-ocean-pavilion-entry/
+    URL: https://i.imgur.com/tdGKCXr.png
+  Shark: https://m.facebook.com/AquariumofthePacific/photos/have-you-met-our-new-scalloped-hammerhead-shark-check-her-out-in-our-molina-anim/10155547625881806/
+    URL: https://i.imgur.com/KczDQKa.png
+  Turtle: https://www.discovery.com/nature/tank-the-sea-turtle-s-gotcha-day-pictures
+    URL: https://i.imgur.com/twaDDuo.png
+  Jellyfish: https://montereybayaquarium.tumblr.com/post/165311795484/young-lions-mane-jellies-are-now-on-exhibit
+    URL: https://i.imgur.com/zSvMh4a.png
+  Seahorse: https://www.liveaquaria.com/product/285/?pcatid=285
+    URL: https://i.imgur.com/fFAFr2D.png
+  Clownfish: https://reeffishcenter.shop/clownfish/534-amphiprion-percula-onyx-onyx-true-percula-clownfish.html
+    URL: https://i.imgur.com/XrqlL5D.png
+  Pufferfish: https://en.wikipedia.org/wiki/Porcupinefish#/media/File:Diodon_nicthemerus.jpg
+    URL:https://i.imgur.com/fn5A57x.png
+  Stingray: https://aqua.org/explore/animals/reticulated-whiptail-ray
+    URL: https://i.imgur.com/sw3cZUx.png
+  Eel: https://en.wikipedia.org/wiki/California_moray#/media/File:California_moray.jpg
+    URL: https://i.imgur.com/ucwqYd2.png
+
+
+
 
   Auth: The class markdowns and Casey helped me figure this part out
 

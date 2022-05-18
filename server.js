@@ -359,3 +359,25 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
 //   <input id="logout-form" type="submit" value="Log Out"/>
 // </form>
+
+
+// //Original Animal index page:
+// <div class="container-fluid">
+//   <div class="container-fluid">
+//       <a href="/animal/new"><button type="button" name="button">Create New Animal</button></a>
+//   </div>
+//
+//
+//   <h1>Animal Index Page</h1>
+//
+//   <% for (let i = 0; i < animalData.length; i++) { %>
+//     <div id="animal-name-container" class="container-sm" style="background-color: white;">
+//       <a href="/animal/<%=animalData[i]._id%>">
+//       <div class="animal-name-img-div">
+//         <img src="<%= animalData[i].animalImg %>" alt="">
+//         <h3 id='animal-name'><%= animalData[i].animalName %></h3>
+//       </div>
+//       </a>
+//     </div>
+//   <% } %>
+// </div>

@@ -4,30 +4,34 @@
     <%- include('../partials/animal_head.ejs') %>
   </head>
   <body>
+    <header>
+      <%- include('../partials/animal_header.ejs') %>
+    </header>
+
     <div class="container-fluid">
-      <header>
-        <%- include('../partials/animal_header.ejs') %>
-      </header>
+        <a href="/animal/new"><button class="btn btn-dark mt-2" type="button" name="button">Create New Animal +</button></a>
     </div>
-    <div class="container-fluid">
-      <div class="container-fluid">
-          <a href="/animal/new"><button type="button" name="button">Create New Animal</button></a>
-      </div>
 
 
-      <h1>Animal Index Page</h1>
+    <div id="animal-index-header" class="container">
+      <h1>Meet Our Animals</h1>
+    </div>
 
-      <% for (let i = 0; i < animalData.length; i++) { %>
-        <div class="container" style="background-color: green;">
-          <a href="/animal/<%=animalData[i]._id%>">
-          <div class="animal-name-species-div">
-            <h3 id='animal-name'><%= animalData[i].name %></h3>
-            <h3 id='animal-species'><%= animalData[i].species %></h3>
+    <div class="container">
+      <div id="animal-flexbox" class="d-flex flex-wrap p-2 justify-content-around">
+        <% for (let i = 0; i < animalData.length; i++) { %>
+          <div id="animal-name-container" class="p-3 m-2" style="background-color: white;">
+            <a href="/animal/<%=animalData[i]._id%>">
+            <div class="animal-name-img-div">
+              <img src="<%= animalData[i].animalImg %>" alt="">
+              <h3 id='animal-name'><%= animalData[i].animalName %></h3>
+            </div>
+            </a>
           </div>
-          </a>
-        </div>
-      <% } %>
+        <% } %>
+      </div>
     </div>
+
 
 
   </body>
