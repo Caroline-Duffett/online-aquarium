@@ -15,8 +15,7 @@ body {
 }
 
 .login-page-flexbox {
-  width: 35%;
-  min-width: 300px;
+  width: 80%;
   margin: 2em auto;
   background-color: #ebf5fb;
   border: solid grey thin;
@@ -59,8 +58,7 @@ body {
 }
 
 .create-form-div {
-  width: 45%;
-  min-width: 400px;
+  width: 80%;
   margin: 2em auto;
   background-color: #ebf5fb;
   border: solid grey thin;
@@ -98,8 +96,7 @@ body {
 }
 
 .login-form-div {
-  width: 45%;
-  min-width: 400px;
+  width: 80%;
   margin: 2em auto;
   background-color: #ebf5fb;
   border: solid grey thin;
