@@ -114,8 +114,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // })
 
 
-
-
 //original json:
 // {
 //   "name": "application",
@@ -148,7 +146,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     "mongoose": "^6.3.3"
 //   }
 // }
-
 
 
 //Original Routes:
@@ -234,91 +231,12 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //   })
 // })
 
+
 // //___________________
 // //Models (need in original)
 // //___________________
 // const fishSeed = require('./models/seed.js') //seed data (original)
 // const Fish = require('./models/schema.js') //schema (original)
-
-
-//Took out footer
-// <footer>
-//   <div class="footer-div">
-//
-//   </div>
-// </footer>
-
-// /*
-// footer {
-//   background-color: #ebf5fb;
-//   width: 100%;
-//   bottom: 0px;
-//   left: 0px;
-//   height: 85px;
-//   box-shadow: 0 -1px 4px rgba(0,0,0,0.4);
-//   position: absolute;
-// }
-// */
-
-
-// //Nav without jQuery:
-// <nav class='show-page-bottom-nav'>
-//   <a id="edit-link" href="/<%=fishData._id%>/edit"/> <button id="edit-btn"  type="button" name="button">Edit</button></a>
-//   <form id="form-link" action='/<%=fishData._id%>?_method=DELETE' method='POST'>
-//     <input id="delete-btn" type="submit" value="Delete">
-//   </form>
-// </nav>
-
-// //css:
-// .show-page-bottom-nav {
-//   display: flex;
-//   flex-wrap: nowrap;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   margin-top: 3%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   width: 20%;
-// }
-
-
-// //logout header try 1
-// <% if (currentUser) { %>
-//   <form action="/sessions?_method=DELETE" method="POST">
-//     <input type="submit" value="Log Out" />
-//   </form>
-// <% } else { %>
-//   <a href="/users/new">Create Account</a>
-//   <a href="/sessions/new">Login</a>
-// <% } %>
-
-
-// // // header links
-// <a href="/users/new">Create Account</a>
-// <a href="/sessions/new">Login</a>
-
-
-//original create new animal form:
-// <form class="animal-form" action="/animal" method="POST">
-//   <div class="form-row">
-//     <label for="animalname">Name: </label>
-//     <input type="text" name="animalname" required/>
-//   </div>
-//   <div class="form-row">
-//     <label for="animalage">Age: </label>
-//     <input type="text" name="animalage" required/>
-//   </div>
-//   <div class="form-row">
-//     <label for="species">Species: </label>
-//     <input type="text" name="species" required/>
-//   </div>
-//   <input class='animal-form-button' type="submit" value="Create Animal"/>
-// </form>
-
-
-//original animal edit form submit button:
-//<input type="submit" value="Create Animal"/>
-
 
 
 // //homepage header try 1:
@@ -348,51 +266,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // </nav>
 
 
-// //orginal animal devete form
-// <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
-//   <input id="delete-btn" type="submit" value="Delete">
-// </form>
-
-// //original logout form
-// <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
-//   <input id="logout-form" type="submit" value="Log Out"/>
-// </form>
-
-
-// //Original Animal index page:
-// <div class="container-fluid">
-//   <div class="container-fluid">
-//       <a href="/animal/new"><button type="button" name="button">Create New Animal</button></a>
-//   </div>
-//
-//
-//   <h1>Animal Index Page</h1>
-//
-//   <% for (let i = 0; i < animalData.length; i++) { %>
-//     <div id="animal-name-container" class="container-sm" style="background-color: white;">
-//       <a href="/animal/<%=animalData[i]._id%>">
-//       <div class="animal-name-img-div">
-//         <img src="<%= animalData[i].animalImg %>" alt="">
-//         <h3 id='animal-name'><%= animalData[i].animalName %></h3>
-//       </div>
-//       </a>
-//     </div>
-//   <% } %>
-// </div>
-
-// //original animal show page btns
-// <div class="show-page-btns">
-//   <a href="/animal/<%=animalData._id%>/edit"/><button id="edit-btn" class="btn btn-light" type="button" name="button">Edit</button></a>
-//   <form action='/animal/<%=animalData._id%>?_method=DELETE' method='POST'>
-//     <button id=animal-delete-btn class="btn btn-light" type="submit" name="button">Delete</button>
-//   </form>
-// </div>
-
-
-// // //original animal new submit button:
-// <input class='animal-form-button' type="submit" value="Create Animal"/>
-
-
 // //original edit route:
 // animals.get('/:id/edit', isAuthenticated, (req, res) => {
 //   Animal.findById(req.params.id, (err, foundAnimal) => {
@@ -404,12 +277,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     )
 //   })
 // })
-
-
-// //If statement try 1:
-// <% if ( <%= fishData.name %> === <%= animalData[l].species %> ) { %>
-//   <li><%= animalData[l].animalName %></li>
-// <% } %>
 
 
 
@@ -438,7 +305,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // </div>
 
 
-
 // //Original animal header:
 // <nav id="animal-header-navbar" class="navbar sticky-top" style="background-color: #ebf5fb;">
 //   <div id="animal-nav-header" class="container-fluid">
@@ -453,8 +319,6 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // </nav>
 
 
-
-// 
 // //Sorta working header code:
 // <div class="mobile-header-div">
 //   <div id='open' class="hamburger-lines2">
@@ -521,3 +385,99 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     })
 //   });
 // </script>
+
+
+// //Aquarium original show route:
+// router.get('/:id', isAuthenticated, (req, res) => {
+//   Fish.findById(req.params.id, (err, foundFish) => {
+//     res.render('aquarium/show.ejs',
+//       {
+//         fishData: foundFish,
+//         currentUser: req.session,
+//       }
+//     )
+//   })
+// })
+
+
+//unique username try ? (tried many things but forgot to save them):
+// users.post('/', (req, res) => {
+//   for (let i = 0; i < currentUser.currentUser.length; i++) {
+//     if (currentUser.username == currentUser.currentUser.username) {
+//       res.send('Username is already taken, try again')
+//     } else {
+//       req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+//       User.create(req.body, (err, createdUser) => {
+//         //res.send(createdUser)
+//         console.log('user is created', createdUser)
+//         res.redirect('/sessions/new')
+//       })
+//     }
+//   }
+// })
+
+
+
+// // 2 Models try:
+// const mongoose = require('mongoose')
+// const Schema = mongoose.Schema
+//
+//
+// const animalSchema = new Schema (
+//   {
+//     animalName: {type: String, required: true},
+//     age: {type: String, required: true},
+//     species: {type: String, required: true},
+//     animalImg: String
+//   }
+// )
+//
+//
+// const fishSchema = new Schema (
+//
+//   {
+//     name: {type: String, required: true},
+//     scientificName: String,
+//     description: {type: String, required: true},
+//     animalType: {type: String, required: true},
+//     range: {type: String, required: true},
+//     img: String,
+//     number: {type: Number, required: true},
+//     diet: [String],
+//     size: String,
+//     animals: [animalSchema]
+//   }
+// )
+//
+//
+// const Animal = mongoose.model('Animal', animalSchema)
+// const Fish = mongoose.model('Fish', fishSchema)
+//
+//
+// //module.exports = Animal
+// //module.exports = Fish
+//
+// const squid = new Fish({
+//   name: 'Squid',
+//   scientificName: 'squid squid',
+//   description: 'This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.',
+//   animalType: 'Fish',
+//   range: 'Oceans',
+//   img: '',
+//   number: 2,
+//   diet: ['test', 'test', 'test'],
+//   size: 'Test'
+// })
+//
+// const animals1 = new Animal({
+//   animalName: 'Squidy',
+//   age: 'test',
+//   species: 'Squid',
+// })
+//
+// squid.animals.push(animals1)
+//
+// squid.save()
+// animals1.save()
+//
+// //nothing is happening

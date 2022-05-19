@@ -21,8 +21,6 @@ const animalSeed = require('../models/animal_seed.js') //seed data
 const Animal = require('../models/animal_schema.js') //schema
 
 
-
-
 //___________________
 // Routes (CRUD)
 //___________________
@@ -109,18 +107,6 @@ router.delete('/:id', isAuthenticated, (req, res) => {
 })
 
 //--- SHOW ROUTE
-// router.get('/:id', isAuthenticated, (req, res) => {
-//   Fish.findById(req.params.id, (err, foundFish) => {
-//     res.render('aquarium/show.ejs',
-//       {
-//         fishData: foundFish,
-//         currentUser: req.session,
-//       }
-//     )
-//   })
-// })
-
-
 router.get('/:id', isAuthenticated, (req, res) => {
   Fish.findById(req.params.id, (err, foundFish) => {
     Animal.find({}, (err, animalData) => { //added for 2 models
@@ -136,16 +122,13 @@ router.get('/:id', isAuthenticated, (req, res) => {
 })
 
 
-
-
-
 module.exports = router
 
 
 
 
 
-//---- post graveyard
+//---- post graveyard ---//
 //Try 1:
 // router.post('/', (req, res) => {
 //   if (req.body.img === '') {

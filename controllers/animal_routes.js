@@ -142,9 +142,6 @@ animals.get('/:id/edit', isAuthenticated, (req, res) => {
 })
 
 
-
-
-
 //--- DESTROY (DELETE) ROUTE
 animals.delete('/:id', isAuthenticated, (req, res) => {
   Animal.deleteOne({_id: req.params.id}, (err, deletedAnimal) => {

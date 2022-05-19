@@ -26,22 +26,3 @@ users.post('/', (req, res) => {
 
 
 module.exports = users
-
-
-
-//Graveyard:
-//unique username try 1:
-// users.post('/', (req, res) => {
-//   for (let i = 0; i < currentUser.currentUser.length; i++) {
-//     if (currentUser.username == currentUser.currentUser.username) {
-//       res.send('Username is already taken, try again')
-//     } else {
-//       req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
-//       User.create(req.body, (err, createdUser) => {
-//         //res.send(createdUser)
-//         console.log('user is created', createdUser)
-//         res.redirect('/sessions/new')
-//       })
-//     }
-//   }
-// })
