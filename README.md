@@ -21,8 +21,7 @@ I did not have time to relate two models the way I wanted or figure out Bootstra
 
 
 
-Sources:
-  Species Page Photos and Info:
+Sources - Species Page Photos and Info:
 
     Atlantic Bottlenose Dolphin Info: https://aqua.org/explore/animals/atlantic-bottlenose-dolphin
     Atlantic Bottlenose Dolphin photo: https://www.britannica.com/animal/common-bottlenose-dolphin
@@ -70,7 +69,7 @@ Sources:
 
 
 
-  Animal Page Profile images:
+  Sources - Animal Page Profile images:
 
     Atlantic Bottlenose Dolphin: https://www.flickr.com/photos/nationalaquarium/5965129472
     URL: https://i.imgur.com/U9LiyPK.png
