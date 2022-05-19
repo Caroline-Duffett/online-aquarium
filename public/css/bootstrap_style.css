@@ -314,12 +314,13 @@ body {
   #home-page-container {
     margin-top: 15%;
     width: 60%;
-    padding: 2%;
+    padding: 4%;
     text-align: center;
     background-color: #ebf5fb;
     border: solid grey thin;
     border-radius: 2em;
     min-width: 400px;
+    max-width: 600px;
   }
 
   #home-page-button-div {
