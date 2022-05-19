@@ -1,11 +1,65 @@
-  <nav id="animal-header-navbar" class="navbar sticky-top" style="background-color: #ebf5fb;">
-    <div id="animal-nav-header" class="container-fluid">
-      <a id="home-link" class="nav-link mr-auto active" href="/home">Home</a>
-      <a id="species-link" class="nav-link mr-2" href="/aquarium">Species</a>
+<div class="mobile-header-div">
+  <div id='open' class="hamburger-lines2">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+  <div id='close' class="hamburger-lines2">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+  <div class="dropdown-menu">
+    <a href="/home"/><button class="btn-2" id="home-btn2" type="button" name="button">Home</button></a>
+    <a href="/aquarium"/><button class="btn-2" id="species-btn2" type="button" name="button">Species</button></a>
+    <a href="/animal"/><button class="btn-2" id="animals-btn2" type="button" name="button">Animals</button></a>
+    <a href="/map"/><button class="btn-2" id="map-btn2" type="button" name="button">Oceans</button></a>
+    <form id="form-in-header2" action="/sessions/?_method=DELETE" method="POST">
+      <button class="btn-2" id="logout-btn2" type="submit" name="button">Log Out</button>
+    </form>
+  </div>
+</div>
 
-      <p id="welcome-message" class="navbar-text mr-4">Welcome <%=currentUser.currentUser.username%> </p>
-      <form action="/sessions/?_method=DELETE" method="POST">
-        <button id="animal-logout-btn" class="btn btn-light" type="submit" name="button">Log out</button>
-      </form>
-    </div>
-  </nav>
+<div class="flex-box-header">
+  <div class="front-btns">
+    <a href="/home"/><button id="home-btn" type="button" name="button">Home</button></a>
+  </div>
+  <div class="front-btns">
+    <a href="/aquarium"/><button id="species-btn" type="button" name="button">Species</button></a>
+  </div>
+  <div class="front-btns">
+    <a href="/animal"/><button id="animals-btn" type="button" name="button">Animals</button></a>
+  </div>
+  <div class="front-btns">
+    <a href="/map"/><button id="map-btn" type="button" name="button">Oceans</button></a>
+  </div>
+  <div class="middle-section">
+    <p id="welcome-message">Welcome <%=currentUser.currentUser.username%>     </p>
+  </div>
+  <div class="end-btns">
+    <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+      <button id="logout-btn" type="submit" name="button">Log Out</button>
+    </form>
+  </div>
+</div>
+
+
+
+<script>
+  $(() => {
+    $('#close').hide()
+    $('.dropdown-menu').hide()
+
+    $('#open').click( () => {
+      $('#open').hide()
+      $('#close').show()
+      $('.dropdown-menu').show()
+    })
+
+    $('#close').click( () => {
+      $('#close').hide()
+      $('#open').show()
+      $('.dropdown-menu').hide()
+    })
+  });
+</script>

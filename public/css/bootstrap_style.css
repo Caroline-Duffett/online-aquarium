@@ -64,8 +64,18 @@ body {
 }
 
 #create-animal-btn-container {
-  padding: 0;
+  display: none;
 }
+
+#create-animal-btn-container2 {
+  text-align: right;
+}
+
+#create-animal-btn2 button {
+  margin: 0;
+}
+
+
 
 /*Animal Show Page*/
 #animal-card {
@@ -74,17 +84,24 @@ body {
   border-radius: 2em;
   margin-top: 10%;
   text-align: center;
+  width: 90%;
 }
 
 #animal-show-header {
   margin-top: 2%;
+  font-size: 25px;
 }
 
 #animal-show-text {
   text-align: left;
-  width: 50%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3%;
+}
+
+#animal-show-text h4 {
+  font-size: 15px;
 }
 
 .profile-pic-img img {
@@ -95,11 +112,13 @@ body {
 #edit-btn {
   border: solid grey thin;
   margin: 2%;
+  font-size: 12px;
 }
 
 #animal-delete-btn {
   border: solid grey thin;
   margin: 2%;
+  font-size: 12px;
 }
 
 .show-page-btns {
@@ -113,17 +132,17 @@ body {
 .btns-div {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 90%;
   justify-content: space-evenly
 }
 
 /*Animal Edit and New Form*/
 .animal-form-wrapper {
-  width: 50%;
-  min-width: 300px;
+  width: 90%;
+  min-width: 250px;
   margin: 4em auto;
   background-color: #ebf5fb;
   border: solid grey thin;
@@ -133,6 +152,7 @@ body {
 
 .animal-form-wrapper h1 {
   text-align: center;
+  font-size: 30px;
 }
 
 .form-wrapper label {
@@ -162,6 +182,11 @@ body {
   height: 20px;
 }
 
+.listen select {
+  width: 100%;
+  height: 20px;
+}
+
 .animal-form {
   display: flex;
   flex-direction: column;
@@ -173,4 +198,450 @@ body {
 #animal-form-btn {
   align-self: center;
   max-width: 33%;
+  min-width: 100px;
+}
+
+
+
+
+
+/*Header*/
+.mobile-header-div {
+  display: block;
+  height: 85px;
+}
+
+.flex-box-header {
+  display: none;
+}
+
+header {
+  background-color: #ebf5fb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  width: 100%;
+  height: 95px;
+}
+
+.button-2 {
+  display: block;
+  background-color: white;
+  color: #2DAFCC;
+  font-size: 15px;
+  padding: 12px 10px;
+  border-radius: 8px ;
+}
+
+.button-2:hover {
+  background-color: lightgray;
+}
+
+.button-2-div {
+  display: block;
+  text-align: right;
+}
+
+.btn-2 {
+  display: block;
+  background-color: #ebf5fb;
+  font-size: 20px;
+  width: 200px;
+  margin: 2%;
+  padding: 4%;
+  border-radius: 5px;
+}
+
+.btn-2:hover {
+  background-color: lightgrey;
+}
+
+
+
+
+.dropdown-menu {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  font-size: 3vw;
+  width: 220px;
+  position: absolute;
+  background-color:rgba(0,0,0,0.3);
+}
+
+.hamburger-lines2 {
+  display: block;
+  padding: 29px;
+  display: flex;
+  height: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.hamburger-lines2:hover {
+  background-color: lightgrey;
+}
+
+
+
+
+#form-in-header2 {
+}
+
+#welcome-message {
+  margin-right: 2%;
+  font-size: 20px;
+  width: 100%;
+}
+
+
+#create-button button {
+  display: none;
+}
+
+#create-button button:hover {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 750px) {
+  body {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23d5d8dc' fill-opacity='0.23' fill-rule='evenodd'/%3E%3C/svg%3E");
+    margin: 0;
+  }
+
+  /*Home Page Header */
+  #home-sticky {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+
+  #logout-btn {
+    border: solid grey thin;
+  }
+
+  /*Home Page*/
+  #home-page-container {
+    margin-top: 15%;
+    width: 60%;
+    padding: 2%;
+    text-align: center;
+    background-color: #ebf5fb;
+    border: solid grey thin;
+    border-radius: 2em;
+  }
+
+  #home-page-button-div {
+    padding: 2%;
+  }
+
+
+
+  /*Animal Pages Navbar*/
+  #animal-logout-btn {
+    border: solid grey thin;
+  }
+
+  #animal-header-navbar {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+
+  /*Animal Index Page*/
+  #animal-name-container {
+    border: solid grey thin;
+    border-radius: 2em;
+    padding: 2%;
+    text-align: center;
+    min-width: 200px;
+  }
+
+  #animal-index-header {
+    text-align: center;
+  }
+
+
+  #animal-flexbox {
+    background-color: #ebf5fb;
+    border: solid grey thin;
+    border-radius: 2em;
+  }
+
+  #create-animal-btn button {
+    display: block;
+    position: fixed;
+    margin: 0;
+  }
+
+  #create-animal-btn-container {
+    display: block;
+    padding: 0;
+  }
+
+  #create-animal-btn-container2 {
+    display: none;
+  }
+
+  #create-animal-btn2 button {
+    display: none;
+  }
+
+  /*Animal Show Page*/
+  #animal-card {
+    background-color: #ebf5fb;
+    border: solid grey thin;
+    border-radius: 2em;
+    margin-top: 10%;
+    text-align: center;
+    width: 50%;
+  }
+
+  #animal-show-header {
+    margin-top: 2%;
+    font-size: 40px;
+  }
+
+  #animal-show-text h4 {
+    font-size: 25px;
+  }
+
+  #animal-show-text {
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+  }
+
+  .profile-pic-img img {
+    height: 100%;
+    width: 150px;
+  }
+
+  #edit-btn {
+    border: solid grey thin;
+    margin: 2%;
+  }
+
+  #animal-delete-btn {
+    border: solid grey thin;
+    margin: 2%;
+  }
+
+  .show-page-btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2% 0;
+  }
+
+  .btns-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    justify-content: space-evenly
+  }
+
+  /*Animal Edit and New Form*/
+  .animal-form-wrapper {
+    width: 50%;
+    min-width: 300px;
+    margin: 4em auto;
+    background-color: #ebf5fb;
+    border: solid grey thin;
+    border-radius: 2em;
+    padding: 1.5em;
+  }
+
+  .animal-form-wrapper h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .form-wrapper label {
+    text-align: center;
+  }
+
+  .listen {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 2% 1%;
+    align-items: center;
+  }
+
+  .listen label {
+    margin-right: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    width: 150px;
+    text-align: right;
+  }
+
+  .listen input {
+    width: 100%;
+    height: 20px;
+  }
+
+  .listen select {
+    width: 100%;
+    height: 20px;
+  }
+
+  .animal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #animal-form-btn {
+    align-self: center;
+    max-width: 33%;
+  }
+
+
+
+
+  /*Header*/
+  .mobile-header-div {
+    display: none;
+  }
+
+  .button-2 {
+    display: none;
+  }
+
+  .button-2-div {
+    display: none;
+  }
+
+  header {
+    background-color: #ebf5fb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    width: 100%;
+    height: 95px;
+  }
+
+  .flex-box-header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .front-btns {
+    align-self: flex-start;
+  }
+
+  .middle-section {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    text-align: right;
+  }
+
+  #welcome-message {
+    font-size: 20px;
+  }
+
+  .end-btns {
+    align-self: right;
+  }
+
+  #home-btn {
+    background-color: #ebf5fb;
+    border: none;
+    border-right: solid gray;
+    padding: 29px 8px;
+    font-size: 23px;
+    align-self: flex-start;
+  }
+
+  #home-btn:hover {
+    background-color: #F2F2F2;
+  }
+
+  #species-btn {
+    background-color: #ebf5fb;
+    border: none;
+    border-right: solid gray;
+    padding: 29px 8px;
+    font-size: 23px;
+  }
+
+  #species-btn:hover {
+    background-color: #F2F2F2;
+  }
+
+  #animals-btn {
+    background-color: #ebf5fb;
+    border: none;
+    border-right: solid gray;
+    padding: 29px 8px;
+    font-size: 23px;
+  }
+
+  #animals-btn:hover {
+    background-color: #F2F2F2;
+  }
+
+  #map-btn {
+    background-color: #ebf5fb;
+    border: none;
+    border-right: solid gray;
+    padding: 29px 8px;
+    font-size: 23px;
+  }
+
+  #map-btn:hover {
+    background-color: #F2F2F2;
+  }
+
+
+  #form-in-header {
+    height: 85px;
+  }
+
+  #logout-btn{
+    background-color: #ebf5fb;
+    border: none;
+    border-left: solid gray;
+    font-size: 23px;
+    padding: 28px 8px;
+    min-width: 95px;
+  }
+
+  #logout-btn:hover {
+    background-color: #F2F2F2;
+  }
+
+  #form-in-header {
+    margin: 0;
+    align-self: flex-end;
+  }
+
+
 }

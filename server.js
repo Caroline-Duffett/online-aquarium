@@ -436,3 +436,18 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     </form>
 //   </div>
 // </div>
+
+
+
+// //Original animal header:
+// <nav id="animal-header-navbar" class="navbar sticky-top" style="background-color: #ebf5fb;">
+//   <div id="animal-nav-header" class="container-fluid">
+//     <a id="home-link" class="nav-link mr-auto active" href="/home">Home</a>
+//     <a id="species-link" class="nav-link mr-2" href="/aquarium">Species</a>
+//
+//     <p id="welcome-message" class="navbar-text mr-4">Welcome <%=currentUser.currentUser.username%> </p>
+//     <form action="/sessions/?_method=DELETE" method="POST">
+//       <button id="animal-logout-btn" class="btn btn-light" type="submit" name="button">Log out</button>
+//     </form>
+//   </div>
+// </nav>
