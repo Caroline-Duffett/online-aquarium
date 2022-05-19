@@ -1,9 +1,22 @@
-<a href="/home"/><button id="home-btn" type="button" name="button">Home</button></a>
-
-<h1 id='index-h1'>Aquarium</h1>
-
-<p id="welcome-message" >Welcome <%=currentUser.currentUser.username%> </p>
-
-<form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
-  <input id="logout-form" type="submit" value="Log Out" />
-</form>
+<div class="flex-box-header">
+  <div class="front-btns">
+    <a href="/home"/><button id="home-btn" type="button" name="button">Home</button></a>
+  </div>
+  <div class="front-btns">
+    <a href="/aquarium"/><button id="species-btn" type="button" name="button">Species</button></a>
+  </div>
+  <div class="front-btns">
+    <a href="/animal"/><button id="animals-btn" type="button" name="button">Animals</button></a>
+  </div>
+  <div class="front-btns">
+    <a href="/map"/><button id="map-btn" type="button" name="button">Oceans</button></a>
+  </div>
+  <div class="middle-section">
+    <p id="welcome-message">Welcome <%=currentUser.currentUser.username%></p>
+  </div>
+  <div class="end-btns">
+    <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+      <button id="logout-btn" type="submit" name="button">Log Out</button>
+    </form>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const Animal = require('../models/animal_schema.js') //added for 2 models
 
 const fishSchema = new Schema (
 
@@ -14,7 +13,6 @@ const fishSchema = new Schema (
     number: {type: Number, required: true},
     diet: [String],
     size: String,
-    animals: [Animal.schema] //added for 2 models
   }
 )
 
