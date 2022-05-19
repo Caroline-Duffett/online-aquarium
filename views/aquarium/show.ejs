@@ -31,13 +31,12 @@
             </div>
             <div class="fish-range-con">
               <p>Range: <%= fishData.range %></p>
-              <a href="/map">View Maps</a>
             </div>
             <div class="fish-size-con">
               <p>Size: <%= fishData.size %></p>
             </div>
             <div class="fish-diet-con">
-              <h4 class="diet-heading">Diet:</h4>
+              <p class="diet-heading">Diet:</p>
               <ul class="diet-list">
                 <% for (let j = 0; j < fishData.diet.length; j++) { %>
                   <li><%= fishData.diet[j] %></li>
@@ -45,11 +44,13 @@
               </ul>
             </div>
             <div class="animal-list-con">
-              <h4 class="animal-heading">Our: <%= fishData.name %>'s</h4>
+              <p class="animal-heading">At the Aquarium: </p>
               <ul class="animal-list">
                 <% for (let l = 0; l < animalData.length; l++) { %>
                   <% if (fishData.name === animalData[l].species) { %>
-                    <li><%= animalData[l].animalName %></li>
+                    <li>
+                      <a href="/animal/<%=animalData[l]._id%>"><%= animalData[l].animalName %></a>
+                    </li>
                   <% } %>
                 <% } %>
               </ul>
@@ -57,20 +58,20 @@
           </div>
         </div>
       </div>
-      <div class="menu-div">
+      <div class="menu-div1">
         <div class="hamburger-lines-div">
-          <div id='open' class="hamburger-lines">
+          <div id='open1' class="hamburger-lines">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </div>
-          <div id='close' class="hamburger-lines">
+          <div id='close1' class="hamburger-lines">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </div>
         </div>
-        <div id="drop" class="drop-menu">
+        <div id="drop1" class="drop-menu1">
           <a href="/aquarium/<%=fishData._id%>/edit"/> <button id="edit-btn" type="button" name="button">Edit</button></a>
           <form action='/aquarium/<%=fishData._id%>?_method=DELETE' method='POST'>
             <input id="delete-btn" type="submit" value="Delete">
@@ -83,20 +84,19 @@
 
 <script>
   $(() => {
+    $('#close1').hide()
+    $('.drop-menu1').hide()
 
-    $('#close').hide()
-    $('.drop-menu').hide()
-
-    $('#open').click( () => {
-      $('#open').hide()
-      $('#close').show()
-      $('.drop-menu').show()
+    $('#open1').click( () => {
+      $('#open1').hide()
+      $('#close1').show()
+      $('.drop-menu1').show()
     })
 
-    $('#close').click( () => {
-      $('#close').hide()
-      $('#open').show()
-      $('.drop-menu').hide()
+    $('#close1').click( () => {
+      $('#close1').hide()
+      $('#open1').show()
+      $('.drop-menu1').hide()
     })
   });
 </script>

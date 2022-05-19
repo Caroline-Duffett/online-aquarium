@@ -410,3 +410,29 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 // <% if ( <%= fishData.name %> === <%= animalData[l].species %> ) { %>
 //   <li><%= animalData[l].animalName %></li>
 // <% } %>
+
+
+
+// //Original Header:
+// <div class="flex-box-header">
+//   <div class="front-btns">
+//     <a href="/home"/><button id="home-btn" type="button" name="button">Home</button></a>
+//   </div>
+//   <div class="front-btns">
+//     <a href="/aquarium"/><button id="species-btn" type="button" name="button">Species</button></a>
+//   </div>
+//   <div class="front-btns">
+//     <a href="/animal"/><button id="animals-btn" type="button" name="button">Animals</button></a>
+//   </div>
+//   <div class="front-btns">
+//     <a href="/map"/><button id="map-btn" type="button" name="button">Oceans</button></a>
+//   </div>
+//   <div class="middle-section">
+//     <p id="welcome-message">Welcome <%=currentUser.currentUser.username%>     </p>
+//   </div>
+//   <div class="end-btns">
+//     <form id="form-in-header" action="/sessions/?_method=DELETE" method="POST">
+//       <button id="logout-btn" type="submit" name="button">Log Out</button>
+//     </form>
+//   </div>
+// </div>

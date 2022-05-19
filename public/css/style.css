@@ -1,3 +1,613 @@
+* {
+  font-family: 'EB Garamond', serif;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23d5d8dc' fill-opacity='0.23' fill-rule='evenodd'/%3E%3C/svg%3E");
+  margin: 0;
+}
+
+/* Login Page Home */
+.login-page-headers {
+  text-align: center;
+  margin-top: 7%;
+}
+
+.login-page-flexbox {
+  width: 35%;
+  min-width: 300px;
+  margin: 2em auto;
+  background-color: #ebf5fb;
+  border: solid grey thin;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+.login-page-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.login-page-buttons a {
+  width: auto;
+  margin: 3%;
+}
+
+
+#create-btn-login {
+  height: 60px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+#login-btn-login {
+  height: 60px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+/* Create Account Page */
+#create-h1 {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.create-form-div {
+  width: 45%;
+  min-width: 400px;
+  margin: 2em auto;
+  background-color: #ebf5fb;
+  border: solid grey thin;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+.new-account-form {
+  text-align: center;
+}
+
+.row {
+  margin: 2%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.row input {
+  height: 20px;
+  width: 100%;
+}
+
+.createAccount-submit {
+  height: 50px;
+  width: 130px;
+  font-size: 15px;
+  border-radius: 15px;
+  margin-top: 3%;
+}
+
+/* Login Page Form */
+#login-h1 {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.login-form-div {
+  width: 45%;
+  min-width: 400px;
+  margin: 2em auto;
+  background-color: #ebf5fb;
+  border: solid grey thin;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+.login-form {
+  text-align: center;
+}
+
+.row-login {
+  margin: 2%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.row-login input {
+  height: 20px;
+  width: 60%;
+}
+
+.login-submit {
+  height: 50px;
+  width: 130px;
+  font-size: 15px;
+  border-radius: 15px;
+  margin-top: 3%;
+}
+
+#home-back-btn {
+  background-color: #ebf5fb;
+  border: none;
+  border-right: solid gray;
+  padding: 29px 15px;
+  font-size: 23px;
+  align-self: flex-start;
+}
+
+#home-back-btn:hover {
+  background-color: #F2F2F2;
+}
+
+
+/* Aquarium Index Page */
+.flex-box-header {
+  display: none;
+}
+
+header {
+  background-color: #ebf5fb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  width: 100%;
+  height: 85px;
+}
+
+.mobile-header-div {
+  height: 85px;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  font-size: 3vw;
+  width: 220px;
+  position: absolute;
+  background-color:rgba(0,0,0,0.3);
+}
+
+.hamburger-lines2 {
+  padding: 29px;
+  display: flex;
+  height: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.hamburger-lines2:hover {
+  background-color: lightgrey;
+}
+
+
+.btn-2 {
+  background-color: #ebf5fb;
+  font-size: 20px;
+  width: 200px;
+  margin: 2%;
+  padding: 4%;
+  border-radius: 5px;
+}
+
+.btn-2:hover {
+  background-color: lightgrey;
+}
+
+#form-in-header2 {
+}
+
+#welcome-message {
+  margin-right: 2%;
+  font-size: 20px;
+  width: 100%;
+}
+
+
+#create-button button {
+  display: none;
+}
+
+#create-button button:hover {
+  display: none;
+}
+
+.button-2 {
+  background-color: white;
+  color: #2DAFCC;
+  font-size: 15px;
+  padding: 12px 10px;
+  border-radius: 8px ;
+}
+
+.button-2:hover {
+  background-color: lightgray;
+}
+
+#button-2-link {
+
+}
+
+.button-2-div {
+  text-align: right;
+}
+
+.index-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  background-color: white;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+#aquarium-index-header {
+  width: 100%;
+  text-align: center;
+}
+
+.fish-wrapper {
+  margin: 1%;
+  width: 30%;
+  min-width: 265px;
+  background-color: white;
+  align-items: center;
+}
+
+.fish-wrapper a {
+  text-decoration: none;
+}
+
+.fish-name-header {
+  color: black;
+  text-align: center;
+  background-color: white;
+}
+
+.fish-name-header:hover {
+  color: blue;
+}
+
+#show-name {
+  margin: 0;
+}
+
+
+.fish-img-container img {
+  height: 100%;
+  max-width: 100%;
+}
+
+
+
+
+/* Aquarium Show Page */
+.fish-info-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 7.5em;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #ebf5fb;
+  border-radius: 2em;
+  padding: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+  border: solid;
+  border-color: gray;
+  border-width: thin;
+}
+
+.fish-name-con {
+  text-align: right;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#commonName {
+  margin: 0;
+}
+
+#scienceName {
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 1%;
+}
+
+.fish-info-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.img-description {
+  width: 70%;
+
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fish-img-con {
+  max-width: 100%;
+}
+
+.fish-img-con img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1em;
+}
+
+.right-side {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 25%;
+  min-width: 200px;
+  justify-content: flex-start;
+  border: solid;
+  border-color: grey;
+  border-radius: 2em;
+  margin-top: 2%;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.animalType-con {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+}
+
+.fish-quantity-con {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+}
+
+.fish-size-con {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+}
+
+.fish-range-con {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+}
+
+.fish-diet-con {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+}
+
+.diet-list {
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.diet-list li {
+  max-width: 200px;
+}
+
+
+.animal-heading {
+  margin: 0;
+  margin-top: 3%;
+}
+
+.animal-list-con {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+}
+
+.animal-list {
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.animal-list li {
+  max-width: 200px;
+}
+
+.animal-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.animal-list a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+.diet-heading {
+  margin: 0;
+}
+
+.fish-description-con {
+  margin: 0 2%;
+}
+
+
+#edit-link {
+  width: 100%;
+}
+
+#edit-btn {
+  background-color: #ebf5fb;
+  font-size: 14px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border-color: gray;
+  margin: 2%;
+}
+
+#edit-btn:hover {
+  background-color: #F2F2F2;
+}
+
+#form-link {
+  width: 100%;
+}
+
+#delete-btn {
+  background-color: #ebf5fb;
+  font-size: 14px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border-color: gray;
+  margin: 2%;
+}
+
+#delete-btn:hover {
+  background-color: #F2F2F2;
+}
+
+.hamburger-lines {
+  padding: 12px;
+  display: flex;
+  height: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.hamburger-lines:hover {
+  background-color: lightgrey;
+}
+
+.line {
+  height: 4px;
+  width: 30px;
+  border-radius: 10px;
+  background: grey;
+}
+
+.drop-menu1 {
+  margin:0;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  min-width: 200px;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
+}
+
+.menu-div1 {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  align-items: center;
+}
+
+
+/* Aquarium New and Edit Form Page */
+.form-wrapper {
+  width: 70%;
+  min-width: 230px;
+  margin: 2em auto;
+  background-color: #ebf5fb;
+  border: solid grey thin;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+.form-wrapper h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.form-row-normal {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 2% 1%;
+  align-items: center;
+}
+
+.form-row-normal h5 {
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  width: 320px;
+  text-align: right;
+}
+
+.form-row-normal input {
+  width: 100%;
+  height: 20px;
+}
+
+.fish-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-button {
+  align-self: center;
+}
+
+/* Aquarium Map Page */
+#maps-h1 {
+  text-align: center;
+}
+
+.maps-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+}
+
+.ocean {
+  background-color: #ebf5fb;
+  padding: 1%;
+  margin: 3% 0;
+  border: solid grey thin;
+  border-radius: 2em;
+}
+
+iframe {
+  width: auto;
+}
+
+
+
+
+
+@media (min-width: 750px) {
   * {
     font-family: 'EB Garamond', serif;
   }
@@ -145,6 +755,18 @@
 
 
   /* Aquarium Index Page */
+  .mobile-header-div {
+    display: none;
+  }
+
+  .button-2 {
+    display: none;
+  }
+
+  .button-2-div {
+    display: none;
+  }
+
   header {
     background-color: #ebf5fb;
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
@@ -169,6 +791,11 @@
     margin-left: auto;
     margin-right: auto;
     align-self: center;
+    text-align: right;
+  }
+
+  #welcome-message {
+    font-size: 20px;
   }
 
   .end-btns {
@@ -179,7 +806,7 @@
     background-color: #ebf5fb;
     border: none;
     border-right: solid gray;
-    padding: 29px 4px;
+    padding: 29px 8px;
     font-size: 23px;
     align-self: flex-start;
   }
@@ -192,7 +819,7 @@
     background-color: #ebf5fb;
     border: none;
     border-right: solid gray;
-    padding: 29px 4px;
+    padding: 29px 8px;
     font-size: 23px;
   }
 
@@ -204,7 +831,7 @@
     background-color: #ebf5fb;
     border: none;
     border-right: solid gray;
-    padding: 29px 4px;
+    padding: 29px 8px;
     font-size: 23px;
   }
 
@@ -216,7 +843,7 @@
     background-color: #ebf5fb;
     border: none;
     border-right: solid gray;
-    padding: 29px 4px;
+    padding: 29px 8px;
     font-size: 23px;
   }
 
@@ -227,12 +854,6 @@
 
   #form-in-header {
     height: 85px;
-  }
-
-  #welcome-message {
-    margin-right: 2%;
-    font-size: 20px;
-    width: 100%;
   }
 
   #logout-btn{
@@ -254,6 +875,7 @@
   }
 
   #create-button button {
+    display: block;
     position: fixed;
     background-color: black;
     color: white;
@@ -264,6 +886,7 @@
   }
 
   #create-button button:hover {
+    display: block;
     background-color: darkgray;
   }
 
@@ -327,8 +950,6 @@
     margin-right: auto;
     margin-top: 2em;
     margin-bottom: 7.5em;
-
-
     width: 70%;
     min-width: 400px;
     display: flex;
@@ -441,6 +1062,41 @@
     margin-bottom: 3%;
   }
 
+  .diet-list li {
+    max-width: 200px;
+  }
+
+
+  .animal-heading {
+    margin: 0;
+    margin-top: 3%;
+  }
+
+  .animal-list-con {
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 90%;
+  }
+
+  .animal-list {
+    margin: 0;
+    margin-bottom: 3%;
+  }
+
+  .animal-list li {
+    max-width: 200px;
+  }
+
+  .animal-list a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .animal-list a:hover {
+    text-decoration: none;
+    color: blue;
+  }
+
   .diet-heading {
     margin: 0;
   }
@@ -457,10 +1113,14 @@
   #edit-btn {
     background-color: #ebf5fb;
     font-size: 17px;
-    padding: 10% 10%;
+    padding: 10px 20px;
     border-radius: 10px;
     border-color: gray;
     margin: 2%;
+  }
+
+  #edit-btn:hover {
+    background-color: #F2F2F2;
   }
 
   #form-link {
@@ -470,10 +1130,14 @@
   #delete-btn {
     background-color: #ebf5fb;
     font-size: 17px;
-    padding: 10% 10%;
+    padding: 10px 20px;
     border-radius: 10px;
     border-color: gray;
     margin: 2%;
+  }
+
+  #delete-btn:hover {
+    background-color: #F2F2F2;
   }
 
   .hamburger-lines {
@@ -496,7 +1160,7 @@
     background: grey;
   }
 
-  .drop-menu {
+  .drop-menu1 {
     margin:0;
     display: flex;
     flex-direction: row;
@@ -507,7 +1171,7 @@
     align-items: center;
   }
 
-  .menu-div {
+  .menu-div1 {
     display: flex;
     width: 100%;
     margin-left: auto;
@@ -575,21 +1239,25 @@
 
   .maps-flexbox {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
   }
 
   .ocean {
     background-color: #ebf5fb;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    flex-direction: column;
     padding: 1%;
     margin: 3% 0;
     border: solid grey thin;
     border-radius: 2em;
   }
 
-  .map {
+  iframe {
+    width: auto;
+  }
+
+}

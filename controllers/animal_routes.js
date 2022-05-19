@@ -62,7 +62,7 @@ animals.post('/', isAuthenticated, (req, res) => {
     req.body.animalImg = 'https://i.imgur.com/KczDQKa.png';
   } else if (req.body.animalImg === '' && req.body.species === 'Green Turtle') {
     req.body.animalImg = 'https://i.imgur.com/twaDDuo.png';
-  } else if (req.body.animalImg === '' && req.body.species == "Lion's Mane Jelly") {
+  } else if (req.body.animalImg === '' && req.body.species == "Lion's Mane Jellyfish") {
     req.body.animalImg = 'https://i.imgur.com/zSvMh4a.png';
   } else if (req.body.animalImg === '' && req.body.species === "Lined Seahorse") {
     req.body.animalImg = 'https://i.imgur.com/fFAFr2D.png';
@@ -104,7 +104,7 @@ animals.put('/:id', isAuthenticated, (req, res) => {
     req.body.animalImg = 'https://i.imgur.com/KczDQKa.png';
   } else if (req.body.animalImg === '' && req.body.species === 'Green Turtle') {
     req.body.animalImg = 'https://i.imgur.com/twaDDuo.png';
-  } else if (req.body.animalImg === '' && req.body.species == "Lion's Mane Jelly") {
+  } else if (req.body.animalImg === '' && req.body.species == "Lion's Mane Jellyfish") {
     req.body.animalImg = 'https://i.imgur.com/zSvMh4a.png';
   } else if (req.body.animalImg === '' && req.body.species === "Lined Seahorse") {
     req.body.animalImg = 'https://i.imgur.com/fFAFr2D.png';
