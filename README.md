@@ -109,6 +109,8 @@ Sources - Species Page Photos and Info:
   Login/logout:
     The class markdowns and Casey helped me figure this part out.
 
+Sources - Other:
+
   Helped me figure out google maps:
     https://extension.umaine.edu/plugged-in/technology-marketing-communications/web/tips-for-web-managers/embed-map/
 
