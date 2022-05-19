@@ -404,3 +404,9 @@ app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 //     )
 //   })
 // })
+
+
+// //If statement try 1:
+// <% if ( <%= fishData.name %> === <%= animalData[l].species %> ) { %>
+//   <li><%= animalData[l].animalName %></li>
+// <% } %>
