@@ -54,6 +54,29 @@ animals.get('/', isAuthenticated, (req, res) => {
 
 //--- Create ROUTE
 animals.post('/', isAuthenticated, (req, res) => {
+  if (req.body.animalImg === '' && req.body.species === 'Atlantic Bottlenose Dolphin') {
+    req.body.animalImg = 'https://i.imgur.com/U9LiyPK.png';
+  } else if (req.body.animalImg === '' && req.body.species === 'Giant Pacific Octopus') {
+    req.body.animalImg = 'https://i.imgur.com/tdGKCXr.png';
+  } else if (req.body.animalImg === '' && req.body.species === 'Scalloped Hammerhead Shark') {
+    req.body.animalImg = 'https://i.imgur.com/KczDQKa.png';
+  } else if (req.body.animalImg === '' && req.body.species === 'Green Turtle') {
+    req.body.animalImg = 'https://i.imgur.com/twaDDuo.png';
+  } else if (req.body.animalImg === '' && req.body.species == "Lion's Mane Jelly") {
+    req.body.animalImg = 'https://i.imgur.com/zSvMh4a.png';
+  } else if (req.body.animalImg === '' && req.body.species === "Lined Seahorse") {
+    req.body.animalImg = 'https://i.imgur.com/fFAFr2D.png';
+  } else if (req.body.animalImg === '' && req.body.species === "Percula Clownfish") {
+    req.body.animalImg = 'https://i.imgur.com/XrqlL5D.png';
+  } else if (req.body.animalImg === '' && req.body.species === "Porcupinefish") {
+    req.body.animalImg = 'https://i.imgur.com/fn5A57x.png';
+  } else if (req.body.animalImg === '' && req.body.species === "Reticulated Whiptail Ray") {
+    req.body.animalImg = 'https://i.imgur.com/sw3cZUx.png';
+  } else if (req.body.animalImg === '' && req.body.species === "California Moray") {
+    req.body.animalImg = 'https://i.imgur.com/ucwqYd2.png';
+  } else if (req.body.animalImg === '') {
+    req.body.animalImg = 'https://i.imgur.com/zKVuuKY.png';
+  } 
   Animal.create(req.body, (err, createdAnimal) => {
     res.redirect('/animal')
   })

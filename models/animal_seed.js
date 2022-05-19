@@ -93,19 +93,19 @@ module.exports = [
     animalName: 'Jellyfish 1',
     age: '4 months',
     species: "Lion's Mane Jelly",
-    animalImg: 'https://i.imgur.com/zSvMh4a.png '
+    animalImg: 'https://i.imgur.com/zSvMh4a.png'
   },
   {
     animalName: 'Jellyfish 2',
     age: '4 months',
     species: "Lion's Mane Jelly",
-    animalImg: 'https://i.imgur.com/zSvMh4a.png '
+    animalImg: 'https://i.imgur.com/zSvMh4a.png'
   },
   {
     animalName: 'Jellyfish 3',
     age: '4 months',
     species: "Lion's Mane Jelly",
-    animalImg: 'https://i.imgur.com/zSvMh4a.png '
+    animalImg: 'https://i.imgur.com/zSvMh4a.png'
   },
   {
     animalName: 'Seabiscuit',

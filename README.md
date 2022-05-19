@@ -88,7 +88,8 @@ The seed information sources:
     URL: https://i.imgur.com/sw3cZUx.png
   Eel: https://en.wikipedia.org/wiki/California_moray#/media/File:California_moray.jpg
     URL: https://i.imgur.com/ucwqYd2.png
-
+  small no photo: https://www.123rf.com/stock-photo/not_available.html?sti=nxn1nh55a9piwt54rf|
+    URL: https://i.imgur.com/zKVuuKY.png
 
 
 
