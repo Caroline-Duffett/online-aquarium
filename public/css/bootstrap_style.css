@@ -4,10 +4,14 @@ body {
   margin: 0;
 }
 
+
+
 /*Home Page Header */
 #home-sticky {
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
+
+
 
 /*Home Page*/
 #home-page-container {
@@ -47,6 +51,8 @@ body {
 #animal-header-navbar {
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
+
+
 
 /*Animal Index Page*/
 #animal-name-container {
@@ -148,6 +154,8 @@ body {
   justify-content: space-evenly
 }
 
+
+
 /*Animal Edit and New Form*/
 .animal-form-wrapper {
   width: 90%;
@@ -209,8 +217,6 @@ body {
   max-width: 33%;
   min-width: 100px;
 }
-
-
 
 
 
@@ -310,6 +316,7 @@ body {
   }
 
 
+
   /*Home Page*/
   #home-page-container {
     margin-top: 15%;
@@ -338,6 +345,8 @@ body {
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
   }
 
+
+
   /*Animal Index Page*/
   #animal-name-container {
     border: solid grey thin;
@@ -350,7 +359,6 @@ body {
   #animal-index-header {
     text-align: center;
   }
-
 
   #animal-flexbox {
     background-color: #ebf5fb;
@@ -376,6 +384,10 @@ body {
   #create-animal-btn2 button {
     display: none;
   }
+
+
+
+
 
   /*Animal Show Page*/
   #animal-card {
@@ -436,6 +448,8 @@ body {
     width: 50%;
     justify-content: space-evenly
   }
+
+
 
   /*Animal Edit and New Form*/
   .animal-form-wrapper {
@@ -500,12 +514,10 @@ body {
 
 
 
-
   /*Header*/
   .mobile-header-div {
     display: none;
   }
-
 
   .button-2 {
     display: none;
@@ -514,8 +526,6 @@ body {
   .button-2-div {
     display: none;
   }
-
-
 
   .flex-box-header {
     display: flex;
